@@ -8,12 +8,12 @@
 \usepackage{longtable}
 
 %nome da section no header de cada página
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\rightmark}
-\fancyhead[R]{\thepage}
-\renewcommand{\headrulewidth}{0pt}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[L]{\rightmark}
+%\fancyhead[R]{\thepage}
+%\renewcommand{\headrulewidth}{0pt}
 \usepackage{dirtytalk}
 
 \bibliography{localbibliography}
@@ -174,7 +174,7 @@ Numerais ordinais devem ser anotados como ADJ, e recebem a feature \say{NumType=
     \depedge{2}{1}{amod}
     \deproot{2}{root}
     \end{dependency}
-    \caption{Anotação do sintagma \say{primeira tentativa}}\label{dep:primeiratentativa}
+    \caption{Anotação do sintagma \textit{primeira tentativa}}\label{dep:primeiratentativa}
 \end{figure*}
 
 \subsection{Verbos de ligação}\label{sec:verbosdeligação}
@@ -200,7 +200,7 @@ Apenas os verbos \say{ser} e \say{estar} são considerados verbos de ligação, 
     \caption{O preço é de US\$ 422}\label{dep:serAUX}
 \end{figure*}
 
-\subsection{Verbo \say{ser} como verbo pleno}\label{sec:serpleno}
+\subsection{Verbo \textit{ser} como verbo pleno}\label{sec:serpleno}
 
 Atenção para casos em que o \say{ser} deve ser \textit{VERB}.
 
@@ -240,7 +240,7 @@ Atenção para casos em que o \say{ser} deve ser \textit{VERB}.
     PRON \& VERB \& ADP \& DET \& PROPN \& PROPN \\
     Isso \& foi \& em \& os \& Estados \& Unidos \\
     isso \& ser \& em \& o \& Estados \& Unidos \\
-    \& \& \& \& MWE=Estados_Unidos \& \\
+    \& \& \& \& MWE=Estados\_Unidos \& \\
     \& \& \& \& MWEPOS=PROPN \& \\
     \end{deptext}
     \depedge{2}{1}{nsubj}
@@ -254,7 +254,7 @@ Atenção para casos em que o \say{ser} deve ser \textit{VERB}.
 \end{figure*}
 
 
-\subsection{Verbo \say{ser} como voz passiva}\label{sec:serpassiva}
+\subsection{Verbo \textit{ser} como voz passiva}\label{sec:serpassiva}
 
 A anotação de \say{ser} como voz passiva é diferente da anotação do verbo de ligação (\ref{sec:verbosdeligação}) e da anotação de \say{ser} como verbo pleno (\ref{sec:serpleno}).
 
