@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7050) (preloaded format=xelatex 2019.9.27)  28 SEP 2019 12:52
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7050) (preloaded format=xelatex 2019.9.27)  28 SEP 2019 16:12
 entering extended mode
 **./main.tex
 (main.tex
@@ -3493,42 +3493,42 @@ Requested font "cmmi10" at 10.95pt
 Requested font "cmmi8" at 8.76pt
 Requested font "cmmi6" at 6.57pt
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 35.
+(Font)              scaled to size 10.95116pt on input line 37.
 Requested font "[LibertinusMath-Regular.otf]/OT:script=math;language=DFLT;" at 
 10.95116pt
  -> /home/elvis/.miktex/texmfs/install/fonts/opentype/public/libertinus-fonts/L
 ibertinusMath-Regular.otf
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 8.76093pt on input line 35.
+(Font)              scaled to size 8.76093pt on input line 37.
 Requested font "[LibertinusMath-Regular.otf]/OT:script=math;language=DFLT;+ssty
 =0;" at 8.76093pt
  -> /home/elvis/.miktex/texmfs/install/fonts/opentype/public/libertinus-fonts/L
 ibertinusMath-Regular.otf
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 6.5707pt on input line 35.
+(Font)              scaled to size 6.5707pt on input line 37.
 Requested font "[LibertinusMath-Regular.otf]/OT:script=math;language=DFLT;+ssty
 =1;" at 6.5707pt
  -> /home/elvis/.miktex/texmfs/install/fonts/opentype/public/libertinus-fonts/L
 ibertinusMath-Regular.otf
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 35.
+(Font)              scaled to size 10.94882pt on input line 37.
 Requested font "[LibertinusMath-Regular.otf]/OT:script=math;language=DFLT;" at 
 10.94882pt
  -> /home/elvis/.miktex/texmfs/install/fonts/opentype/public/libertinus-fonts/L
 ibertinusMath-Regular.otf
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 8.75905pt on input line 35.
+(Font)              scaled to size 8.75905pt on input line 37.
 Requested font "[LibertinusMath-Regular.otf]/OT:script=math;language=DFLT;+ssty
 =0;" at 8.75905pt
  -> /home/elvis/.miktex/texmfs/install/fonts/opentype/public/libertinus-fonts/L
 ibertinusMath-Regular.otf
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 6.5693pt on input line 35.
+(Font)              scaled to size 6.5693pt on input line 37.
 Requested font "[LibertinusMath-Regular.otf]/OT:script=math;language=DFLT;+ssty
 =1;" at 6.5693pt
  -> /home/elvis/.miktex/texmfs/install/fonts/opentype/public/libertinus-fonts/L
 ibertinusMath-Regular.otf
-LaTeX Font Info:    Try loading font information for U+msa on input line 35.
+LaTeX Font Info:    Try loading font information for U+msa on input line 37.
 (/home/elvis/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -3539,7 +3539,7 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 Requested font "msam10" at 8.76pt
 Requested font "msam7" at 6.57pt
-LaTeX Font Info:    Try loading font information for U+msb on input line 35.
+LaTeX Font Info:    Try loading font information for U+msb on input line 37.
 
 (/home/elvis/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -3569,7 +3569,7 @@ Requested font "msbm7" at 6.57pt
 ] (main.mw)
 \openout3 = `main.mw'.
 
-Package tocbasic Info: character protrusion at toc deactivated on input line 35
+Package tocbasic Info: character protrusion at toc deactivated on input line 37
 .
  (main.toc
 Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=DFLT;+liga;+pnum;
@@ -3610,11 +3610,10 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface .
 
-
-Overfull \hbox (111.0357pt too wide) in paragraph at lines 62--63
- [][] 
- []
-
+Requested font "[LinLibertine_RZ.otf]/OT:script=latn;language=DFLT;+liga;+pnum;
+mapping=tex-text;" at 14.4pt
+ -> /home/elvis/.miktex/texmfs/install/fonts/opentype/public/libertine/LinLiber
+tine_RZ.otf
 \openout3 = `main.mw'.
 
 [5] (main.mw)
@@ -3631,10 +3630,15 @@ Overfull \vbox (10.2pt too high) has occurred while \output is active []
 
 
 chapter 3.
-Requested font "[LinLibertine_RZ.otf]/OT:script=latn;language=DFLT;+liga;+pnum;
-mapping=tex-text;" at 14.4pt
- -> /home/elvis/.miktex/texmfs/install/fonts/opentype/public/libertine/LinLiber
-tine_RZ.otf
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 85.
+
+
+Overfull \hbox (15.4291pt too wide) in paragraph at lines 87--126
+ [][] 
+ []
+
 \openout3 = `main.mw'.
 
 [7
@@ -3642,6 +3646,19 @@ tine_RZ.otf
 
 ] (main.mw)
 \openout3 = `main.mw'.
+
+Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=DFLT;+liga;+pnum;
+mapping=tex-text;" at 10.0pt
+ -> /home/elvis/.miktex/texmfs/install/fonts/opentype/public/libertine/LinLiber
+tine_RI.otf
+Requested font "[LinLibertine_RZI.otf]/OT:script=latn;language=DFLT;+liga;+pnum
+;mapping=tex-text;" at 14.4pt
+ -> /home/elvis/.miktex/texmfs/install/fonts/opentype/public/libertine/LinLiber
+tine_RZI.otf
+
+Overfull \hbox (16.07742pt too wide) in paragraph at lines 181--182
+ [][] 
+ []
 
 
 Overfull \vbox (10.2pt too high) has occurred while \output is active []
@@ -3653,37 +3670,86 @@ Overfull \vbox (10.2pt too high) has occurred while \output is active []
 \openout3 = `main.mw'.
 
 
-chapter 4.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 117.
+LaTeX Warning: Citation 'elvis2019locverbal' on page 9 undefined on input line 
+235.
 
 
-Overfull \hbox (38.69783pt too wide) in paragraph at lines 119--158
- [][] 
- []
+LaTeX Warning: Hyper reference `sec:auxtempocomposto' on page 9 undefined on in
+put line 235.
+
+
+LaTeX Warning: Reference `sec:auxtempocomposto' on page 9 undefined on input li
+ne 235.
+
+
+LaTeX Warning: Reference `sec:auxtempocomposto' on page 9 undefined on input li
+ne 235.
+
+
+LaTeX Warning: Hyper reference `sec:auxaspecto' on page 9 undefined on input li
+ne 235.
+
+
+LaTeX Warning: Reference `sec:auxaspecto' on page 9 undefined on input line 235
+.
+
+
+LaTeX Warning: Reference `sec:auxaspecto' on page 9 undefined on input line 235
+.
+
+
+LaTeX Warning: Hyper reference `sec:auxmodal' on page 9 undefined on input line
+ 235.
+
+
+LaTeX Warning: Reference `sec:auxmodal' on page 9 undefined on input line 235.
+
+
+LaTeX Warning: Reference `sec:auxmodal' on page 9 undefined on input line 235.
+
+
+Overfull \vbox (10.2pt too high) has occurred while \output is active []
+
+\openout3 = `main.mw'.
+
+ [9]
+(main.mw)
+\openout3 = `main.mw'.
+
+Requested font "[LinLibertine_RZ.otf]/OT:script=latn;language=DFLT;+liga;+pnum;
+mapping=tex-text;" at 12.0pt
+ -> /home/elvis/.miktex/texmfs/install/fonts/opentype/public/libertine/LinLiber
+tine_RZ.otf
+
+
+LaTeX Warning: Hyper reference `dep:auxtempocomposto' on page 10 undefined on i
+nput line 241.
+
+
+LaTeX Warning: Reference `dep:auxtempocomposto' on page 10 undefined on input l
+ine 241.
+
+
+LaTeX Warning: Reference `dep:auxtempocomposto' on page 10 undefined on input l
+ine 241.
+
+
+LaTeX Warning: Hyper reference `tab:auxtempocomposto' on page 10 undefined on i
+nput line 241.
+
+
+LaTeX Warning: Reference `tab:auxtempocomposto' on page 10 undefined on input l
+ine 241.
+
+
+LaTeX Warning: Reference `tab:auxtempocomposto' on page 10 undefined on input l
+ine 241.
 
 Requested font "[LinLibertine_RZI.otf]/OT:script=latn;language=DFLT;+liga;+pnum
-;mapping=tex-text;" at 14.4pt
+;mapping=tex-text;" at 12.0pt
  -> /home/elvis/.miktex/texmfs/install/fonts/opentype/public/libertine/LinLiber
 tine_RZI.otf
-Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=DFLT;+liga;+pnum;
-mapping=tex-text;" at 10.0pt
- -> /home/elvis/.miktex/texmfs/install/fonts/opentype/public/libertine/LinLiber
-tine_RI.otf
-\openout3 = `main.mw'.
-
-[9
-
-
-] (main.mw)
-\openout3 = `main.mw'.
-
-
-Overfull \hbox (16.07742pt too wide) in paragraph at lines 231--232
- [][] 
- []
-
 
 Overfull \vbox (10.2pt too high) has occurred while \output is active []
 
@@ -3702,23 +3768,19 @@ Overfull \vbox (10.2pt too high) has occurred while \output is active []
 (main.mw)
 \openout3 = `main.mw'.
 
-
-Overfull \vbox (10.2pt too high) has occurred while \output is active []
-
 \openout3 = `main.mw'.
 
- [12]
-(main.mw)
-\openout3 = `main.mw'.
-
-
-chapter 5.
-\openout3 = `main.mw'.
-
-[13
+ [12
 
 
 ] (main.mw)
+\openout3 = `main.mw'.
+
+
+chapter 4.
+\openout3 = `main.mw'.
+
+[13] (main.mw)
 \openout3 = `main.mw'.
 
 
@@ -3730,14 +3792,6 @@ Overfull \vbox (10.2pt too high) has occurred while \output is active []
 (main.mw)
 \openout3 = `main.mw'.
 
-Requested font "[LinLibertine_RZ.otf]/OT:script=latn;language=DFLT;+liga;+pnum;
-mapping=tex-text;" at 12.0pt
- -> /home/elvis/.miktex/texmfs/install/fonts/opentype/public/libertine/LinLiber
-tine_RZ.otf
-File: imagesDrive/image20.png Graphic file (type bmp)
-<imagesDrive/image20.png>
-File: imagesDrive/image27.png Graphic file (type bmp)
-<imagesDrive/image27.png>
 
 Overfull \vbox (10.2pt too high) has occurred while \output is active []
 
@@ -3755,9 +3809,15 @@ Overfull \vbox (10.2pt too high) has occurred while \output is active []
 ] (main.mw)
 \openout3 = `main.mw'.
 
+
+chapter 5.
+File: imagesDrive/image20.png Graphic file (type bmp)
+<imagesDrive/image20.png>
+File: imagesDrive/image27.png Graphic file (type bmp)
+<imagesDrive/image27.png>
 \openout3 = `main.mw'.
 
- [17] (main.mw)
+[17] (main.mw)
 \openout3 = `main.mw'.
 
 \openout3 = `main.mw'.
@@ -3773,32 +3833,50 @@ Overfull \vbox (10.2pt too high) has occurred while \output is active []
  [19] (main.mw)
 \openout3 = `main.mw'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
- (main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 345.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
+\openout3 = `main.mw'.
+
+ [20
+
+
+] (main.mw)
+\openout3 = `main.mw'.
+
+\openout3 = `main.mw'.
+
+ [21] (main.mw)
+\openout3 = `main.mw'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 375.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 375.
+
+(main.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 375.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 375.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 69150 strings out of 427669
- 1386927 string characters out of 3147794
- 2063274 words of memory out of 3000000
- 72331 multiletter control sequences out of 15000+200000
- 536624 words of font info for 96 fonts, out of 3000000 for 9000
+ 68813 strings out of 427669
+ 1376088 string characters out of 3147794
+ 2060409 words of memory out of 3000000
+ 71989 multiletter control sequences out of 15000+200000
+ 536632 words of font info for 97 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  82i,14n,118p,9086b,5092s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.pdf (19 pages).
+Output written on main.pdf (21 pages).

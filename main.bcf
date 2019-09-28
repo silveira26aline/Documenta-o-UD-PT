@@ -2132,8 +2132,7 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">mcdonald2013universal</bcf:citekey>
-    <bcf:citekey order="2">Chomsky1957</bcf:citekey>
-    <bcf:citekey order="3">Nordhoff2018</bcf:citekey>
+    <bcf:citekey order="2">elvis2019locverbal</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

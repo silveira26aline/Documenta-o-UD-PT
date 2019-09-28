@@ -3,28 +3,38 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{{Documentação UD em português\\ (e para língua portuguesa)\ \newline {\normalfont Elvis de Souza, Tatiana Cavalcanti, Aline Silveira, Wograine Evelyn, Cláudia Freitas}}}{1}{chapter*.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Não apagar: seção de códigos que podem ser úteis de copiar}{5}{chapter.2}% 
+\hypertarget {toc}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Formato UD}{7}{chapter.3}% 
+\contentsline {chapter}{\numberline {2}Formato UD}{5}{chapter.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Colunas/anotações}{7}{section.3.1}% 
+\contentsline {section}{\numberline {1}Colunas/anotações}{5}{section.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Manipulação em Python}{8}{section.3.2}% 
+\contentsline {section}{\numberline {2}Manipulação em Python}{6}{section.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Classes gramaticais (upos)}{9}{chapter.4}% 
+\contentsline {chapter}{\numberline {3}Classes gramaticais (upos)}{7}{chapter.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}\textit {Primeiro} lugar: adjetivo ou numeral?}{9}{section.4.1}% 
+\contentsline {section}{\numberline {1}Verbos de ligação}{7}{section.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Verbos de ligação}{10}{section.4.2}% 
+\contentsline {section}{\numberline {2}Verbo \textit {ser} como verbo pleno}{8}{section.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Verbo \textit {ser} como verbo pleno}{10}{section.4.3}% 
+\contentsline {section}{\numberline {3}Verbo \textit {ser} como voz passiva}{9}{section.3.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Verbo \textit {ser} como voz passiva}{11}{section.4.4}% 
+\contentsline {section}{\numberline {4}Verbos auxiliares}{9}{section.3.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Atributos morfológicos (feats)}{13}{chapter.5}% 
+\contentsline {subsection}{\numberline {4.1}Tempo composto}{10}{subsection.3.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Estruturas comparativas}{15}{section.5.1}% 
+\contentsline {subsection}{\numberline {4.2}Locuções verbais aspectuais}{10}{subsection.3.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Frases do Working Group}{15}{subsection.5.1.1}% 
+\contentsline {section}{\numberline {5}Numerais}{10}{section.3.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Frases do Bosque-UD}{15}{subsection.5.1.2}% 
+\contentsline {subsection}{\numberline {5.1}\textit {Primeiro} lugar: adjetivo ou numeral?}{10}{subsection.3.5.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Atributos morfológicos (feats)}{13}{chapter.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Dependências (dephead e deprel)}{17}{chapter.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Estruturas comparativas}{17}{section.5.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}Frases do Working Group}{17}{subsection.5.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}Frases do Bosque-UD}{17}{subsection.5.1.2}% 
