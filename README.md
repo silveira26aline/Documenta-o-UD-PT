@@ -4,7 +4,7 @@ Fluxo de trabalho para preparação da Documentação UD em português (e para l
 
 * [Como começar](#como-começar)
 * [Para enviar alterações](#para-enviar-alterações)
-* [Para editar a documentação](#para-editar-a-documentação)
+* [Para atualizar a documentação](#para-atualizar-a-documentação)
 * [Guidelines](#guidelines)
     * [Chapter, section, subsection, label, caption e fullref](#chapter-section-subsection-label-caption-e-fullref)
     * [Aspas e itálico](#aspas-e-itálico)
@@ -55,11 +55,7 @@ git push
 
 [![Enviar PR no GitHub](https://img.shields.io/github/issues-pr/alvelvis/Documenta-o-UD-PT.svg?style=social)](https://github.com/alvelvis/Documenta-o-UD-PT/pulls)
 
-## Para editar a documentação
-
-**ANTES de tudo: atualizar o repositório**
-
-Se certificar de que está com a versão mais atualizada do repositório:
+## Para atualizar a documentação
 
 1) Baixar alterações da *sua* versão do repositório (caso esteja trabalhando em computadores diferentes, por exemplo):
 
@@ -72,8 +68,6 @@ git pull
 ```
 git pull https://github.com/alvelvis/Documenta-o-UD-PT
 ```
-
-3) Começar as edições.
 
 ## Guidelines
 
@@ -110,6 +104,8 @@ Como na \fullref{fig:example}, ...
 ```
 
 Resultado: `Como na Figura 1: Figura ilustrativa, ...`
+
+4) **Não** adicione ponto final nos captions para que ele possa ser lido como referência.
 
 ### Aspas e itálico
 
