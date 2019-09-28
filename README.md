@@ -31,8 +31,6 @@ git clone https://github.com/{username}/Documenta-o-UD-PT
 
 4) Instalar o [MiKTeX](https://miktex.org/download) e editar o arquivo **main.tex** com o compilador **XeLaTeX**.
 
-[[Voltar ao menu]](#guidelines-das-guidelines-ud-pt)
-
 ## Para enviar alterações
 
 1) Adicionar todos as alterações de todos os arquivos do repositório:
@@ -57,8 +55,6 @@ git push
 
 [![Enviar PR no GitHub](https://img.shields.io/github/issues-pr/alvelvis/Documenta-o-UD-PT.svg?style=social)](https://github.com/alvelvis/Documenta-o-UD-PT/pulls)
 
-[[Voltar ao menu]](#guidelines-das-guidelines-ud-pt)
-
 ## Para editar a documentação
 
 **ANTES de tudo: atualizar o repositório**
@@ -78,8 +74,6 @@ git pull https://github.com/alvelvis/Documenta-o-UD-PT
 ```
 
 3) Começar as edições.
-
-[[Voltar ao menu]](#guidelines-das-guidelines-ud-pt)
 
 ## Guidelines
 
@@ -117,8 +111,6 @@ Como na \fullref{fig:example}, ...
 
 Resultado: `Como na Figura 1: Figura ilustrativa, ...`
 
-[[Voltar ao menu]](#guidelines-das-guidelines-ud-pt)
-
 ### Aspas e itálico
 
 1) **Não** utilizar aspas na documentação, pois elas não são decodificadas pelo LaTeX. Substituir pelo comando *say*:
@@ -139,8 +131,6 @@ Resultado: Apenas os verbos "ser" e "estar" são considerados verbos de ligaçã
 
 - Exceto no caso de **caption** e **chapters**/**section**/**subsection**, como visto na [Seção Chapter, section, subsection, label, caption e fullref](#chapter-section-subsection-label-caption-e-fullref), pois o LaTeX não aceita aspas dentro desses lugares, portanto deixamos em itálico as palavras que queremos destacar, e não com aspas.
 
-[[Voltar ao menu]](#guidelines-das-guidelines-ud-pt)
-
 ### Citações
 
 1) Citações devem seguir o nome no arquivo **localbibliography.bib**, por exemplo:
@@ -159,8 +149,6 @@ Como citar: `\citep{mcdonald2013universal}`
 
 Resultado: `(McDonald et al. 2013)`
 
-[[Voltar ao menu]](#guidelines-das-guidelines-ud-pt)
-
 ### Maiúsculas e minúsculas
 
 1) Colunas UD são representadas em minúsculas (upos, deprel, etc.)
@@ -169,12 +157,8 @@ Resultado: `(McDonald et al. 2013)`
 
 3) deprel são minúsculas (ccomp, xcomp, etc.)
 
-[[Voltar ao menu]](#guidelines-das-guidelines-ud-pt)
-
 ### Representação de sentenças
 
 1) Sentenças ideais que representam algum fenômeno podem ser desenhadas utilizando o pacote `tikz-dependency`, cortando a sentença para caber horizontalmente na página.
 
 2) Sentenças de anotação complexa devem ter uma imagem da anotação completa.
-
-[[Voltar ao menu]](#guidelines-das-guidelines-ud-pt)
