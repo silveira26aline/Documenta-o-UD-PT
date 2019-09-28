@@ -2,18 +2,17 @@
 
 Fluxo de trabalho para preparação da Documentação UD em português (e para língua portuguesa)
 
-   * [Guidelines das guidelines UD-PT](#guidelines-das-guidelines-ud-pt)
-      * [Como começar](#como-começar)
-      * [Para enviar alterações](#para-enviar-alterações)
-      * [Para editar a documentação](#para-editar-a-documentação)
-         * [ANTES de tudo: atualizar o repositório](#antes-de-tudo-atualizar-o-repositório)
-      * [Guidelines das edições](#guidelines-das-edições)
-         * [Chapter, section, subsection, label, caption e fullref](#chapter-section-subsection-label-caption-e-fullref)
-         * [Aspas e itálico](#aspas-e-itálico)
-         * [Citações](#citações)
-      * [Maiúsculas e minúsculas](#maiúsculas-e-minúsculas)
-      * [Representação de sentenças](#representação-de-sentenças)
-      * [Checklist](#checklist)
+* [Como começar](#como-começar)
+* [Para enviar alterações](#para-enviar-alterações)
+* [Para editar a documentação](#para-editar-a-documentação)
+    * [ANTES de tudo: atualizar o repositório](#antes-de-tudo-atualizar-o-repositório)
+* [Guidelines das edições](#guidelines-das-edições)
+    * [Chapter, section, subsection, label, caption e fullref](#chapter-section-subsection-label-caption-e-fullref)
+    * [Aspas e itálico](#aspas-e-itálico)
+    * [Citações](#citações)
+* [Maiúsculas e minúsculas](#maiúsculas-e-minúsculas)
+* [Representação de sentenças](#representação-de-sentenças)
+* [Checklist](#checklist)
 
 
 ## Como começar
@@ -215,7 +214,7 @@ Resultado: `(McDonald et al. 2013)`
 
 - [x] Atributos morfológicos (feats)
 
-- [ ] Dependência (dephead e deprel)
+- [ ] Dependências (dephead e deprel)
     - [ ] Núcleo da oração
         - [ ] Predicado verbal
         - [ ] Predicado nominal

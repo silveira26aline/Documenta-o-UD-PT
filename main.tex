@@ -38,7 +38,7 @@
 
 \chapter{Formato UD}\label{sec:formatoud}
 
-\hyperlink{toc}{Tabela de conteúdos\\}
+\hyperlink{toc}{Ir para tabela de conteúdos\\}
 
 Os treebanks adaptados para a gramática UD são disponibilizados no formato CoNLL, em que há um token por linha. Cada anotação de cada token, por sua vez, é disposta em uma coluna, sendo 10 colunas ao todo. Cada token tem a configuração conforme a \fullref{tab:colunasUD}, com uma tabulação (\textit{Tab}) separando as colunas. Colunas sem nenhum valor devem, necessariamente, ser preenchidas com \textit{underline}.
 
@@ -53,7 +53,7 @@ Os treebanks adaptados para a gramática UD são disponibilizados no formato CoN
 
 \section{Colunas/anotações}\label{sec:colunas}
 
-\hyperlink{toc}{Tabela de conteúdos\\}
+
 
 \begin{enumerate}
     \item “id” corresponde ao número do token, em ordem crescente;
@@ -70,13 +70,15 @@ Os treebanks adaptados para a gramática UD são disponibilizados no formato CoN
 
 \section{Manipulação em Python}\label{sec:python}
 
-\hyperlink{toc}{Tabela de conteúdos\\}
+
 
 Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence e Token (e suas respectivas anotações), desenvolvemos e utilizamos o \href{https://github.com/alvelvis/ACDC-UD/blob/master/estrutura_ud.py}{estrutura\_ud.py}.
 
 \chapter{Classes gramaticais (upos)}\label{sec:upos}
 
-\hyperlink{toc}{Tabela de conteúdos\\}
+\hyperlink{toc}{Ir para tabela de conteúdos\\}
+
+
 
 As classes gramaticais em UD podem ser consultadas na \fullref{tab:upos}.
 
@@ -125,31 +127,9 @@ As classes gramaticais em UD podem ser consultadas na \fullref{tab:upos}.
     \label{tab:upos}
 \end{table}{}
 
-\section{\textit{Primeiro} lugar: adjetivo ou numeral?}\label{sec:adjounum}
-
-\hyperlink{toc}{Tabela de conteúdos\\}
-
-Numerais ordinais escritos por extenso devem ser anotados como \emph{ADJ}, e recebem a feature \emph{NumType=Ord}, como na \fullref{dep:primeiratentativa}.
-
-\begin{figure*}[htbp]
-    \centering
-    \vspace{.8cm}
-    \begin{dependency}
-    \begin{deptext}
-    ADJ \& NOUN \\
-    primeira \& tentativa \\
-    primeiro \& tentativa \\
-    NumType=Ord \& \\
-    \end{deptext}
-    \depedge{2}{1}{amod}
-    \deproot{2}{root}
-    \end{dependency}
-    \caption{Anotação do sintagma \textit{primeira tentativa}}\label{dep:primeiratentativa}
-\end{figure*}
-
 \section{Verbos de ligação}\label{sec:verbosdeligação}
 
-\hyperlink{toc}{Tabela de conteúdos\\}
+
 
 Apenas os verbos \say{ser} e \say{estar} são considerados verbos de ligação, e portanto serão sempre anotados como \textit{AUX}. Os demais verbos que a GT costuma elencar como verbo de ligação (parecer, permanecer, etc.) são anotados como \textit{VERB}. Os verbos de ligação \textit{AUX} terão relação sintática \say{cop}, e nunca poderão ser núcleo de uma oração (Xx) nem conter dependentes. \fullref{dep:serAUX}.
 
@@ -172,9 +152,9 @@ Apenas os verbos \say{ser} e \say{estar} são considerados verbos de ligação, 
     \caption{O preço \emph{é} de US\$ 422}\label{dep:serAUX}
 \end{figure*}
 
-\section{Verbo \textit{ser} como verbo pleno}\label{sec:serpleno}
+\subsection{Verbo \textit{ser} como verbo pleno}\label{sec:serpleno}
 
-\hyperlink{toc}{Tabela de conteúdos\\}
+
 
 Atenção para casos em que o \say{ser} deve ser \textit{VERB}.
 
@@ -227,9 +207,9 @@ Atenção para casos em que o \say{ser} deve ser \textit{VERB}.
     \caption{Isso \emph{foi} nos Estados Unidos}\label{dep:serVERB2}
 \end{figure*}
 
-\section{Verbo \textit{ser} como voz passiva}\label{sec:serpassiva}
+\subsection{Verbo \textit{ser} como voz passiva}\label{sec:serpassiva}
 
-\hyperlink{toc}{Tabela de conteúdos\\}
+
 
 A anotação de \say{ser} como voz passiva é diferente da anotação do verbo de ligação (\fullref{sec:verbosdeligação}) e da anotação de \say{ser} como verbo pleno (\fullref{sec:serpleno}).
 
@@ -254,9 +234,35 @@ A anotação de \say{ser} como voz passiva é diferente da anotação do verbo d
     \caption{A fotografia \emph{foi} publicada na imprensa}\label{dep:serPASS}
 \end{figure*}
 
+\section{Numerais}\label{sec:numerais}
+
+
+
+\subsection{\textit{Primeiro} lugar: adjetivo ou numeral?}\label{sec:adjounum}
+
+
+
+Numerais ordinais escritos por extenso devem ser anotados como \emph{ADJ}, e recebem a feature \emph{NumType=Ord}, como na \fullref{dep:primeiratentativa}.
+
+\begin{figure*}[htbp]
+    \centering
+    \vspace{.8cm}
+    \begin{dependency}
+    \begin{deptext}
+    ADJ \& NOUN \\
+    primeira \& tentativa \\
+    primeiro \& tentativa \\
+    NumType=Ord \& \\
+    \end{deptext}
+    \depedge{2}{1}{amod}
+    \deproot{2}{root}
+    \end{dependency}
+    \caption{Anotação do sintagma \textit{primeira tentativa}}\label{dep:primeiratentativa}
+\end{figure*}
+
 \chapter{Atributos morfológicos (feats)}\label{sec:feats}
 
-\hyperlink{toc}{Tabela de conteúdos\\}
+\hyperlink{toc}{Ir para tabela de conteúdos\\}
 
 Temos a seguinte distribuição de atributos morfológicos por classe gramatical (\fullref{tab:feats}). É importante notar que os atributos morfológicos devem constar em ordem alfabética e são separados por uma barra reta.
 
@@ -284,15 +290,21 @@ X & \_ \\
 \label{tab:feats}
 \end{longtable}
 
+\chapter{Dependências (dephead e deprel)}
+
+\hyperlink{toc}{Ir para tabela de conteúdos\\}
+
+
+
 \section{Estruturas comparativas}
 
-\hyperlink{toc}{Tabela de conteúdos\\}
+
 
 Estruturas comparativas são de anotação complexa, o que se verifica pela existência de um \href{https://universaldependencies.org/workgroups/comparatives.html}{working group (WG) em UD} dedicado especialmente a elas. A seguir, listamos as frases utilizadas no WG, traduzidas em português, e com a anotação adequada, além de algumas frases de anotação complexa no Bosque-UD.
 
 \subsection{Frases do Working Group}
 
-\hyperlink{toc}{Tabela de conteúdos\\}
+
 
 \begin{figure}
     \centering
@@ -310,15 +322,19 @@ Estruturas comparativas são de anotação complexa, o que se verifica pela exis
 
 \subsection{Frases do Bosque-UD}
 
-\hyperlink{toc}{Tabela de conteúdos\\}
+
 
 \chapter*{Abreviações}
 
-\hyperlink{toc}{Tabela de conteúdos\\}
+\hyperlink{toc}{Ir para tabela de conteúdos\\}
+
+
 
 \chapter*{Agradecimentos}
 
-\hyperlink{toc}{Tabela de conteúdos\\}
+\hyperlink{toc}{Ir para tabela de conteúdos\\}
+
+
 
 \printbibliography[heading=subbibliography,notkeyword=this]
 
