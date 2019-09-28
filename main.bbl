@@ -1,0 +1,100 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{mcdonald2013universal}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=c89c5fee46ef8f26ee51eb1a51c0b154}{%
+           family={McDonald},
+           familyi={M\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c7682865373d09c3dcbd9422fbb74cc0}{%
+           family={Nivre},
+           familyi={N\bibinitperiod},
+           given={Joakim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cf14663791e7fe57beb518b20319f0ec}{%
+           family={Quirmbach-Brundage},
+           familyi={Q\bibinithyphendelim B\bibinitperiod},
+           given={Yvonne},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=33b00f3e2f4f1bb310f1cf8d4a4c500a}{%
+           family={Goldberg},
+           familyi={G\bibinitperiod},
+           given={Yoav},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b8019d13f15afa35450262916b4cec44}{%
+           family={Das},
+           familyi={D\bibinitperiod},
+           given={Dipanjan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=57a712a3a14e8d26543a1f0740596706}{%
+           family={Ganchev},
+           familyi={G\bibinitperiod},
+           given={Kuzman},
+           giveni={K\bibinitperiod}}}%
+        {{hash=e01ef8812581349c0f03661f39872fb4}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={Keith},
+           giveni={K\bibinitperiod}}}%
+        {{hash=6d4804cc2b12eeb7ab41eb5ee03fc7ab}{%
+           family={Petrov},
+           familyi={P\bibinitperiod},
+           given={Slav},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8c6d18e2d167e1a3dc88c0166bbc3471}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c4a2e2af119cfe610935f6d37c429aed}{%
+           family={Oscar},
+           familyi={O\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef882b1c0b6e58949ac4f1bdcb5c3625}
+      \strng{fullhash}{59e3a329bfdaeb3e48865de093c69ea5}
+      \strng{bibnamehash}{59e3a329bfdaeb3e48865de093c69ea5}
+      \strng{authorbibnamehash}{59e3a329bfdaeb3e48865de093c69ea5}
+      \strng{authornamehash}{ef882b1c0b6e58949ac4f1bdcb5c3625}
+      \strng{authorfullhash}{59e3a329bfdaeb3e48865de093c69ea5}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)}
+      \field{title}{Universal dependency annotation for multilingual parsing}
+      \field{year}{2013}
+      \field{pages}{92\bibrangedash 97}
+      \range{pages}{6}
+    \endentry
+  \enddatalist
+  \missing{Chomsky1957}
+  \missing{Nordhoff2018}
+\endrefsection
+\endinput
+

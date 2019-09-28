@@ -1,0 +1,68 @@
+This is LuaTeX, Version 1.10.0 (MiKTeX 2.9.7050)  (format=luatex 2019.9.28)  28 SEP 2019 10:38
+ restricted system commands enabled.
+**/home/elvis/Documenta-o-UD-PT/localbibliography.bib
+(/home/elvis/Documenta-o-UD-PT/localbibliography.bib
+Overfull \hbox (4.1349pt too wide) in paragraph at lines 18--25
+[]\tenrm @ar-ti-cle-san-tos2014pode-mos, ti-tle=Pode-mos con-tar com as con-tas
+?, au-thor=San-tos, Di-ana, jour-nal=quot;|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0, direction TLT
+.\localpar
+..\localinterlinepenalty=0
+..\localbrokenpenalty=0
+..\localleftbox=null
+..\localrightbox=null
+.\hbox(0.0+0.0)x20.0, direction TLT
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.etc.
+
+
+Underfull \vbox (badness 2884) has occurred while \output is active
+\vbox(643.20255+2.13193)x469.75499, glue set 3.06752, direction TLT
+.\glue(\topskip) 2.5
+.\hbox(7.5+1.94444)x469.75499, glue set 0.2764, direction TLT
+..\localpar
+...\localinterlinepenalty=0
+...\localbrokenpenalty=0
+...\localleftbox=null
+...\localrightbox=null
+..\hbox(0.0+0.0)x20.0, direction TLT
+..\tenrm @
+..\tenrm i
+..\tenrm n
+..etc.
+.\penalty 150
+.\glue(\baselineskip) 3.11111
+.\hbox(6.94444+1.94444)x469.75499, glue set 0.6564, direction TLT
+..\tenrm l
+..\tenrm i
+..\tenrm n
+..\discretionary (penalty 50) []
+..\tenrm g
+..etc.
+.etc.
+
+ [1{/home/elvis/.miktex/texmfs/data/pdftex/config/pdftex.map}
+Missing character: There is no ư (U+01B0) in font cmr10!
+Missing character: There is no ơ (U+01A1) in font cmr10!
+Missing character: There is no ư (U+01B0) in font cmr10!
+Missing character: There is no ơ (U+01A1) in font cmr10!
+Missing character: There is no ̀ (U+0300) in font cmr10!
+] [2
+Missing character: There is no ș (U+0219) in font cmr10!
+Missing character: There is no á (U+00E1) in font cmr10!
+Missing character: There is no ê (U+00EA) in font cmr10!
+Missing character: There is no ç (U+00E7) in font cmr10!
+Missing character: There is no ã (U+00E3) in font cmr10!
+Missing character: There is no ê (U+00EA) in font cmr10!
+Missing character: There is no í (U+00ED) in font cmr10!
+Missing character: There is no á (U+00E1) in font cmr10!
+])
+! Emergency stop.
+<*> .../elvis/Documenta-o-UD-PT/localbibliography.bib
+                                                  
+*** (job aborted, no legal \end found)
+
+!  ==> Fatal error occurred, no output PDF file produced!

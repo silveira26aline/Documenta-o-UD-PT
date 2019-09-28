@@ -1,0 +1,30 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {portuguese}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{{Documentação UD em português\\ (e para língua portuguesa)\ \newline {\normalfont Elvis de Souza, Tatiana Cavalcanti, Aline Silveira, Wograine Evelyn, Cláudia Freitas}}}{1}{chapter*.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Não apagar: seção de códigos que podem ser úteis de copiar}{3}{section.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Formato UD}{4}{section.1.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Colunas/anotações}{4}{subsection.1.2.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Manipulação em Python}{5}{subsection.1.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Classe gramatical (upos)}{5}{section.1.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}\textit {Primeiro} lugar: ADJ ou NUM?}{5}{subsection.1.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Verbos de ligação}{7}{subsection.1.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Verbo \textit {ser} como verbo pleno}{7}{subsection.1.3.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4}Verbo \textit {ser} como voz passiva}{8}{subsection.1.3.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Atributos morfológicos (feats)}{8}{section.1.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Estruturas comparativas}{10}{section.1.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Frases do Working Group}{11}{subsection.1.5.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Frases do Bosque-UD}{11}{subsection.1.5.2}% 
