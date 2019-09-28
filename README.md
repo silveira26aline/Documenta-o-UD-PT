@@ -62,7 +62,7 @@ git push
 
 ## Para editar a documentação
 
-### ANTES de tudo: atualizar o repositório
+**ANTES de tudo: atualizar o repositório**
 
 Se certificar de que está com a versão mais atualizada do repositório:
 
