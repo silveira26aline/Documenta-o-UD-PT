@@ -12,7 +12,6 @@ Fluxo de trabalho para preparação da Documentação UD em português (e para l
     * [Citações](#citações)
 * [Maiúsculas e minúsculas](#maiúsculas-e-minúsculas)
 * [Representação de sentenças](#representação-de-sentenças)
-* [Checklist](#checklist)
 
 
 ## Como começar
@@ -178,72 +177,5 @@ Resultado: `(McDonald et al. 2013)`
 1) Sentenças ideais que representam algum fenômeno podem ser desenhadas utilizando o pacote `tikz-dependency`, cortando a sentença para caber horizontalmente na página.
 
 2) Sentenças de anotação complexa devem ter uma imagem da anotação completa.
-
-[[Voltar ao menu]](#guidelines-das-guidelines-ud-pt)
-
-## Checklist
-
-**Estrutura:**
-
-- \chapter{}
-    - \section{}
-        - \subsection{}
-
-**Esqueleto:**
-
-- [x] Formato UD
-    - [x] Colunas/anotações
-    - [x] Manipulação em Python
-
-
-- [ ] Classes gramaticais (upos)
-    - [x] Verbos de ligação
-        - [x] Verbo *ser* como verbo pleno
-        - [x] Verbo *ser* como voz passiva
-    - [ ] Verbos auxiliares
-        - [ ] Tempo composto
-        - [ ] Locuções verbais de aspecto
-    - [ ] Formas participiais: verbo ou adjetivo?
-    - [ ] Numerais
-        - [ ] Números compostos
-        - [x] *Primeiro* lugar: adjetivo ou numeral?
-    - [ ] Pronomes substantivos, pronomes adjetivos, interrogativos, artigos e determinantes
-        - [ ] *A mais querida*, *O que eu sei*: pronome ou artigo?
-    - [ ] Preposições
-    - [ ] Conjunções
-
-- [x] Atributos morfológicos (feats)
-
-- [ ] Dependências (dephead e deprel)
-    - [ ] Núcleo da oração
-        - [ ] Predicado verbal
-        - [ ] Predicado nominal
-        - [ ] Predicado verbo-nominal
-    - [ ] Orações coordenadas
-    - [ ] Parataxis
-    - [ ] Sujeito da oração
-    - [ ] Predicativos
-        - [ ] *Pintou a modelo nua*
-    - [ ] Argumentos do verbo
-        - [ ] *Declarou o réu culpado*
-    - [ ] Adjuntos do verbo
-        - [ ] Orações adjetivas ou relativas
-        - [ ] Adjunto adverbial
-    - [ ] Adjuntos e argumento do substantivo
-        - [ ] Adjunto adnominal
-        - [ ] Adjunto adjetival
-        - [ ] Complemento nominal
-        - [ ] Aposto
-    - [ ] Argumentos do adjetivo
-    - [ ] Locuções verbais
-    - [ ] Voz passiva
-    - [ ] Pontuação
-    - [ ] Discurso direto
-    - [ ] Estruturas comparativas
-    - [ ] Particípio
-    - [ ] MWEs
-        - [ ] É que
-    - [ ] Hiperônimos
-        - [ ] Como / tal como
 
 [[Voltar ao menu]](#guidelines-das-guidelines-ud-pt)
