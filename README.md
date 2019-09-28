@@ -6,7 +6,7 @@ Fluxo de trabalho para preparação da Documentação UD em português (e para l
 * [Para enviar alterações](#para-enviar-alterações)
 * [Para editar a documentação](#para-editar-a-documentação)
     * [ANTES de tudo: atualizar o repositório](#antes-de-tudo-atualizar-o-repositório)
-* [Guidelines das edições](#guidelines-das-edições)
+* [Guidelines](#guidelines)
     * [Chapter, section, subsection, label, caption e fullref](#chapter-section-subsection-label-caption-e-fullref)
     * [Aspas e itálico](#aspas-e-itálico)
     * [Citações](#citações)
@@ -82,7 +82,7 @@ git pull https://github.com/alvelvis/Documenta-o-UD-PT
 
 [[Voltar ao menu]](#guidelines-das-guidelines-ud-pt)
 
-## Guidelines das edições
+## Guidelines
 
 ### Chapter, section, subsection, label, caption e fullref
 
@@ -162,7 +162,7 @@ Resultado: `(McDonald et al. 2013)`
 
 [[Voltar ao menu]](#guidelines-das-guidelines-ud-pt)
 
-## Maiúsculas e minúsculas
+### Maiúsculas e minúsculas
 
 1) Colunas UD são representadas em minúsculas (upos, deprel, etc.)
 
@@ -172,7 +172,7 @@ Resultado: `(McDonald et al. 2013)`
 
 [[Voltar ao menu]](#guidelines-das-guidelines-ud-pt)
 
-## Representação de sentenças
+### Representação de sentenças
 
 1) Sentenças ideais que representam algum fenômeno podem ser desenhadas utilizando o pacote `tikz-dependency`, cortando a sentença para caber horizontalmente na página.
 
