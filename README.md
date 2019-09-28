@@ -9,8 +9,8 @@ Fluxo de trabalho para preparação da Documentação UD em português (e para l
     * [Chapter, section, subsection, label, caption e fullref](#chapter-section-subsection-label-caption-e-fullref)
     * [Aspas e itálico](#aspas-e-itálico)
     * [Citações](#citações)
-* [Maiúsculas e minúsculas](#maiúsculas-e-minúsculas)
-* [Representação de sentenças](#representação-de-sentenças)
+    * [Maiúsculas e minúsculas](#maiúsculas-e-minúsculas)
+    * [Representação de sentenças](#representação-de-sentenças)
 
 
 ## Como começar
