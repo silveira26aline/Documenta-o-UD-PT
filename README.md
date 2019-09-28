@@ -4,7 +4,7 @@ Fluxo de trabalho para preparação da Documentação UD em português (e para l
 
 * [Como começar](#como-começar)
 * [Para enviar alterações](#para-enviar-alterações)
-* [Para editar a documentação](#para-editar-a-documentação)
+* [Para atualizar a documentação](#para-atualizar-a-documentação)
 * [Guidelines](#guidelines)
     * [Chapter, section, subsection, label, caption e fullref](#chapter-section-subsection-label-caption-e-fullref)
     * [Aspas e itálico](#aspas-e-itálico)
