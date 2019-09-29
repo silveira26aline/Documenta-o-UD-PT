@@ -145,7 +145,7 @@ Como citar:
 
 1) `\citep{mcdonald2013universal}`
 
-2) `\citet{mcdonald2013universal}
+2) `\citet{mcdonald2013universal}`
 
 Resultado 1: `(McDonald et al. 2013)`
 
