@@ -33,10 +33,10 @@ git clone https://github.com/{username}/Documenta-o-UD-PT
 
 ## Para enviar alterações
 
-1) Adicionar todas as alterações de todos os arquivos do repositório:
+1) Adicionar todas as alterações feitas ao próximo commit:
 
 ```
-git add -A
+git add -u
 ```
 
 2) Realizar **commit** das suas alterações:
