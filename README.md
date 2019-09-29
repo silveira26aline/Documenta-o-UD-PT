@@ -141,9 +141,15 @@ Resultado: Apenas os verbos "ser" e "estar" são considerados verbos de ligaçã
 }
 ```
 
-Como citar: `\citep{mcdonald2013universal}`
+Como citar:
 
-Resultado: `(McDonald et al. 2013)`
+1) `\citep{mcdonald2013universal}`
+
+2) `\citet{mcdonald2013universal}
+
+Resultado 1: `(McDonald et al. 2013)`
+
+Resultado 2: `McDonald et al. 2013`
 
 ### Maiúsculas e minúsculas
 
