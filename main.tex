@@ -78,9 +78,7 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 
 \hyperlink{toc}{Ir para tabela de conteúdos\\}
 
-
-
-As classes gramaticais em UD podem ser consultadas na \fullref{tab:upos}.
+\fullref{tab:upos}
 
 \begin{table}[]
     \centering
@@ -135,13 +133,15 @@ As classes gramaticais em UD podem ser consultadas na \fullref{tab:upos}.
 	
 	Via de regra, verbos auxiliares (\emph{AUX}) não podem ter dependentes, e dependem de um verbo principal (\emph{VERB}). O deprel pode ser \emph{cop}, \emph{aux} ou \emph{aux:pass}, de acordo com a função sintática.
 
-	A \fullref{tab:aux} mostra a lista com todos os verbos auxiliares, sejam eles verbos de ligação, voz passiva ou locuções verbais de tempo composto/aspectuais/modais.
+	\fullref{tab:aux}
 
-	A \fullref{tab:verbosdeligação} mostra a lista apenas com os verbos de ligação.
+	\fullref{tab:verbosdeligação}
 
-	A \fullref{tab:vozpassiva} mostra a lista de todos os verbos que ocupam a posição de voz passiva.
+	\fullref{tab:vozpassiva}
+	
+	\fullref{tab:locuçõesverbais}
 
-	A \fullref{tab:locuçõesverbais} mostra a lista de todos os verbos que são auxiliares em uma locução verbal.
+	\fullref{tab:auxphrasalverb}
 
 	\begin{table}[]
 		\parbox{.45\linewidth}{
@@ -205,105 +205,18 @@ As classes gramaticais em UD podem ser consultadas na \fullref{tab:upos}.
 					quer & 1\\\hline
 			\end{tabular}
 		}
-		\caption{Lista das 23 palavras que ocorrem 3541 vezes como verbo auxiliar no Bosque-UD}
+		\caption{Lista das 23 palavras que ocorrem 3541 vezes como verbo auxiliar (\emph{AUX}) no Bosque-UD}
 		\label{tab:aux}
 	\end{table}
 
-	\begin{table}[]
-		\centering
-		\begin{tabular}{|c|c|}
-			\hline
-			\textbf{Verbo de ligação} & \textbf{Frequência} \\\hline
-			estar & 33\\\hline
-			ser & 105\\\hline
-		\end{tabular}
-		\caption{Lista das 2 palavras que ocorrem 138 vezes como verbo de ligação no Bosque-UD}
-		\label{tab:verbosdeligação}
-	\end{table}
-
-	\begin{table}[]
-		\centering
-		\begin{tabular}{|c|c|}
-			\hline
-			\textbf{Voz passiva} & \textbf{Frequência} \\\hline
-			ficar & 1\\\hline
-			ser & 1114\\\hline
-		\end{tabular}
-		\caption{Lista das 2 palavras que ocorrem 1115 vezes como voz passiva no Bosque-UD}
-		\label{tab:vozpassiva}
-	\end{table}
-
-	\begin{table}[]
-		\parbox{.45\linewidth}{
-			\centering
-			\begin{tabular}{|c|c|}
-				\hline
-				\textbf{Locução verbal} & \textbf{Frequência} \\\hline
-				acabar & 56\\\hline
-				andar & 4\\\hline
-				chegar & 19\\\hline
-				começar & 62\\\hline
-				continuar & 57\\\hline
-				costumar & 10\\\hline
-				deixar & 24\\\hline
-				dever & 217\\\hline
-				estar & 249\\\hline
-				faltar & 1\\\hline
-				ficar & 10\\\hline
-				haver & 37\\\hline
-				ir & 358\\\hline
-				parar & 3\\\hline
-				parecer & 17\\\hline
-				passar & 39\\\hline
-				poder & 394\\\hline
-				procurar & 1\\\hline
-				quer & 1\\\hline
-				ser & 53\\\hline
-				ter & 536\\\hline
-				vir & 68\\\hline
-				voltar & 40\\\hline
-			\end{tabular}
-		}
-		\hfill
-		\parbox{.45\linewidth}{
-			\centering
-			\begin{tabular}{|c|c|}
-				\hline
-				\textbf{Locução verbal} & \textbf{Frequência} \\\hline
-				ter & 536\\\hline
-				poder & 394\\\hline
-				ir & 358\\\hline
-				estar & 249\\\hline
-				dever & 217\\\hline
-				vir & 68\\\hline
-				começar & 62\\\hline
-				continuar & 57\\\hline
-				acabar & 56\\\hline
-				ser & 53\\\hline
-				voltar & 40\\\hline
-				passar & 39\\\hline
-				haver & 37\\\hline
-				deixar & 24\\\hline
-				chegar & 19\\\hline
-				parecer & 17\\\hline
-				costumar & 10\\\hline
-				ficar & 10\\\hline
-				andar & 4\\\hline
-				parar & 3\\\hline
-				faltar & 1\\\hline
-				procurar & 1\\\hline
-				quer & 1\\\hline
-			\end{tabular}
-		}
-		\caption{Lista das 23 palavras que ocorrem 2256 vezes como locução verbal no Bosque-UD}
-		\label{tab:locuçõesverbais}
-	\end{table}
 
 	\subsection{Verbos de ligação}\label{sec:verbosdeligação}
 	
-		Apenas os verbos \say{ser} e \say{estar} são considerados verbos de ligação, e portanto serão sempre anotados como \textit{AUX}. Os demais verbos que a GT costuma elencar como verbo de ligação (parecer, permanecer, etc.) são anotados como \textit{VERB}. Os verbos de ligação \textit{AUX} terão relação sintática \emph{cop}, e nunca poderão ser núcleo de uma oração (Xx) nem conter dependentes. \fullref{dep:serAUX}.
+		Apenas os verbos \say{ser} e \say{estar} são considerados verbos de ligação, e portanto serão sempre anotados como \textit{AUX}. Os demais verbos que a GT costuma elencar como verbo de ligação (parecer, permanecer, etc.) são anotados como \textit{VERB}. Os verbos de ligação \textit{AUX} terão relação sintática \emph{cop}, e nunca poderão ser núcleo de uma oração (Xx) nem conter dependentes.
 
-		A frequência dos verbos de ligação pode ser consultada em \fullref{tab:verbosdeligação}.
+		\fullref{dep:serAUX}
+
+		\fullref{tab:verbosdeligação}
 		
 		\begin{figure*}[htbp]
 		    \centering
@@ -324,12 +237,26 @@ As classes gramaticais em UD podem ser consultadas na \fullref{tab:upos}.
 		    \caption{O preço \emph{é} de US\$ 422}\label{dep:serAUX}
 		\end{figure*}
 
+		\begin{table}[]
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				\textbf{Verbo de ligação} & \textbf{Frequência} \\\hline
+				estar & 33\\\hline
+				ser & 105\\\hline
+			\end{tabular}
+			\caption{Lista das 2 palavras que ocorrem 138 vezes como verbo de ligação (\emph{AUX/cop}) no Bosque-UD}
+			\label{tab:verbosdeligação}
+		\end{table}
+
 
 	\subsection{Verbo \textit{ser} como voz passiva}\label{sec:servozpassiva}
 	
-		A anotação de \say{ser} como voz passiva, além do upos \emph{AUX}, deve receber deprel \emph{aux:pass}, como na \fullref{dep:serPASS}.
+		A anotação de \say{ser} como voz passiva, além do upos \emph{AUX}, deve receber deprel \emph{aux:pass}.
 
-		A frequência da voz passiva pode ser consultada em \fullref{tab:vozpassiva}.
+		\fullref{dep:serPASS}
+
+		\fullref{tab:vozpassiva}
 		
 		\begin{figure*}[htbp]
 		    \centering
@@ -351,13 +278,27 @@ As classes gramaticais em UD podem ser consultadas na \fullref{tab:upos}.
 		    \end{dependency}
 		    \caption{A fotografia \emph{foi} publicada na imprensa}\label{dep:serPASS}
 		\end{figure*}
+
+		\begin{table}[]
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				\textbf{Voz passiva} & \textbf{Frequência} \\\hline
+				ficar & 1\\\hline
+				ser & 1114\\\hline
+			\end{tabular}
+			\caption{Lista das 2 palavras que ocorrem 1115 vezes como voz passiva (\emph{AUX/aux:pass}) no Bosque-UD}
+			\label{tab:vozpassiva}
+		\end{table}
 	
 
 	\subsection{Locuções verbais de tempo composto}\label{sec:auxtempocomposto}
 
-		Segundo as gramáticas, são locuções verbais de tempo composto aquelas que têm como verbo auxiliar \say{ter}, \say{haver} e, para nós, também \say{ir}. Confira um exemplo de locução verbal de tempo composto na \fullref{dep:auxtempocomposto}. 
+		Segundo as gramáticas, são locuções verbais de tempo composto aquelas que têm como verbo auxiliar \say{ter}, \say{haver} e, para nós, também \say{ir}. 
 
-		A \fullref{tab:locuçõesverbais} mostra a lista de locuções verbais, entre elas, as de tempo composto.
+		\fullref{dep:auxtempocomposto}
+
+		\fullref{tab:locuçõesverbais}
 
 		\begin{figure*}[htbp]
 			\centering
@@ -383,18 +324,84 @@ As classes gramaticais em UD podem ser consultadas na \fullref{tab:upos}.
 			\label{dep:auxtempocomposto}
 		\end{figure*}
 
+		\begin{table}[]
+			\parbox{.45\linewidth}{
+				\centering
+				\begin{tabular}{|c|c|}
+					\hline
+					\textbf{Locução verbal} & \textbf{Frequência} \\\hline
+					acabar & 56\\\hline
+					andar & 4\\\hline
+					chegar & 19\\\hline
+					começar & 62\\\hline
+					continuar & 57\\\hline
+					costumar & 10\\\hline
+					deixar & 24\\\hline
+					dever & 217\\\hline
+					estar & 249\\\hline
+					faltar & 1\\\hline
+					ficar & 10\\\hline
+					haver & 37\\\hline
+					ir & 358\\\hline
+					parar & 3\\\hline
+					parecer & 17\\\hline
+					passar & 39\\\hline
+					poder & 394\\\hline
+					procurar & 1\\\hline
+					quer & 1\\\hline
+					ser & 53\\\hline
+					ter & 536\\\hline
+					vir & 68\\\hline
+					voltar & 40\\\hline
+				\end{tabular}
+			}
+			\hfill
+			\parbox{.45\linewidth}{
+				\centering
+				\begin{tabular}{|c|c|}
+					\hline
+					\textbf{Locução verbal} & \textbf{Frequência} \\\hline
+					ter & 536\\\hline
+					poder & 394\\\hline
+					ir & 358\\\hline
+					estar & 249\\\hline
+					dever & 217\\\hline
+					vir & 68\\\hline
+					começar & 62\\\hline
+					continuar & 57\\\hline
+					acabar & 56\\\hline
+					ser & 53\\\hline
+					voltar & 40\\\hline
+					passar & 39\\\hline
+					haver & 37\\\hline
+					deixar & 24\\\hline
+					chegar & 19\\\hline
+					parecer & 17\\\hline
+					costumar & 10\\\hline
+					ficar & 10\\\hline
+					andar & 4\\\hline
+					parar & 3\\\hline
+					faltar & 1\\\hline
+					procurar & 1\\\hline
+					quer & 1\\\hline
+				\end{tabular}
+			}
+			\caption{Lista das 23 palavras que ocorrem 2256 vezes como locução verbal (\emph{AUX/aux}) no Bosque-UD}
+			\label{tab:locuçõesverbais}
+		\end{table}
+
 
 	\subsection{Locuções verbais aspectuais/modais}\label{sec:auxaspecto}
 
 		Confira um exemplo de locução verbal aspectual na \fullref{dep:auxphrasalverb}, e modal na \fullref{dep:auxmodal}.
 
-		A \fullref{tab:locuçõesverbais} mostra a lista de locuções verbais, entre elas, as locuções verbais aspectuais/modais.
+		\fullref{tab:locuçõesverbais}
 
 		Segundo as gramáticas, o que distingue a locução verbal aspectual da modal é que, na primeira, o verbo auxiliar caracteriza a temporalidade da ação do verbo principal, e na segunda, o verbo auxiliar caracteriza um julgamento do enunciador sobre a ação do verbo principal. Alguns gramáticos divergem sobre como a classificação se dá, portanto apenas herdamos, no Bosque-UD, o que já era a anotação originária do PALAVRAS \citep{bick2000parsing}, e resolvemos não modificá-la.
 
 		Repare que, nos casos de locução verbal aspectual, geralmente há uma partícula interveniente no meio da locução, como na \fullref{dep:auxphrasalverb}, em que há um \say{a} entre \say{começar} e \say{ouvir}. Encaramos que estamos diante de um fenômeno de \emph{phrasal verb}, uma MWE do tipo \emph{AUX}, como sugerido em \citet{elvis2019locverbal}. Na frase, \emph{vai ouvir} é uma locução verbal de tempo composto (\fullref{sec:auxtempocomposto}), e \say{começar a ouvir} é uma locução verbal aspectual, sendo \say{começar a} uma expressão multi-palavra (MWE) do tipo auxiliar.
 
-		Listamos essas MWEs auxiliares com partículas intervenientes na \fullref{tab:auxphrasalverb}.
+		\fullref{tab:auxphrasalverb}
 
 		\begin{figure*}[htbp]
 			\centering
@@ -521,7 +528,7 @@ As classes gramaticais em UD podem ser consultadas na \fullref{tab:upos}.
 						tornar a & 1\\\hline
 				\end{tabular}
 			}
-			\caption{Lista das 31 MWEs que ocorrem 570 vezes como locuções auxiliares no Bosque-UD}
+			\caption{Lista das 31 MWEs que ocorrem 570 vezes como locuções auxiliares (\emph{AUX/aux + ADP/compound}) no Bosque-UD}
 			\label{tab:auxphrasalverb}
 		\end{table}
 
@@ -559,30 +566,58 @@ As classes gramaticais em UD podem ser consultadas na \fullref{tab:upos}.
 		2) \say{ser} verbo intransitivo (verbo pleno) também deve ter a anotação \textit{VERB}, como na \fullref{dep:serVERB2}.
 		
 		\begin{figure*}[htbp]
-		    \centering
-		    \vspace{.8cm}
-		    \begin{dependency}
-		    \begin{deptext}
-		    PRON \& VERB \& ADP \& DET \& PROPN \& PROPN \\
-		    Isso \& foi \& em \& os \& Estados \& Unidos \\
-		    isso \& ser \& em \& o \& Estados \& Unidos \\
-		    \& \& \& \& MWE=Estados\_Unidos \& \\
-		    \& \& \& \& MWEPOS=PROPN \& \\
-		    \end{deptext}
-		    \depedge{2}{1}{nsubj}
-		    \depedge{5}{3}{case}
-		    \deproot{2}{root}
-		    \depedge{5}{4}{det}
-		    \depedge{5}{6}{flat:name}
-		    \depedge{2}{5}{obl}
-		    \end{dependency}
-		    \caption{Isso \emph{foi} nos Estados Unidos}\label{dep:serVERB2}
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					PRON \& VERB \& ADP \& DET \& PROPN \& PROPN \\
+					Isso \& foi \& em \& os \& Estados \& Unidos \\
+					isso \& ser \& em \& o \& Estados \& Unidos \\
+					\& \& \& \& MWE=Estados\_Unidos \& \\
+					\& \& \& \& MWEPOS=PROPN \& \\
+				\end{deptext}
+				\depedge{2}{1}{nsubj}
+				\depedge{5}{3}{case}
+				\deproot{2}{root}
+				\depedge{5}{4}{det}
+				\depedge{5}{6}{flat:name}
+				\depedge{2}{5}{obl}
+			\end{dependency}
+			\caption{Isso \emph{foi} nos Estados Unidos}
+			\label{dep:serVERB2}
 		\end{figure*}
 
 
 	\subsection{Não são locuções verbais: \emph{VERB + VERB}}
 
-		Ainda segundo as decisões do PALAVRAS \citep{bick2000parsing}, há outras tantas colocações de dois verbos que não são locuções verbais. Portanto, são todos casos de verbos plenos, de upos \emph{VERB}, em que o segundo verbo é dependente do primeiro, como oração substantiva objetiva reduzida de infinitivo (Xx). Veja a lista de verbos na \fullref{tab:nãolocverbal}.
+		Ainda segundo as decisões do PALAVRAS \citep{bick2000parsing}, há outras tantas colocações de dois verbos que não são locuções verbais. Portanto, são todos casos de verbos plenos, de upos \emph{VERB}, em que o segundo verbo é dependente do primeiro, como oração substantiva objetiva reduzida de infinitivo (Xx).
+
+		\fullref{dep:nãolocverbal}
+
+		\fullref{tab:nãolocverbal}
+
+		\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					DET \& NOUN \& VERB \& VERB \& ADP \& VERB \& ADP \& PRON \& PUNCT  \\
+					Muitos \& pintores \& quiseram \& aprender \& a \& pintar \& com \& ele \& . \\
+					muito \& pintor \& querer \& aprender \& a \& pintar \& com \& ele \& . \\
+				\end{deptext}
+				\depedge{2}{1}{det}
+				\depedge{3}{2}{nsubj}
+				\deproot{3}{root}
+				\depedge{3}{4}{xcomp}
+				\depedge{4}{6}{xcomp}
+				\depedge{6}{5}{mark}
+				\depedge{8}{7}{case}
+				\depedge{3}{9}{punct}
+				\depedge{4}{8}{obl}
+			\end{dependency}
+			\caption{Muitos pintores \emph{quiseram aprender a pintar} com ele}
+			\label{dep:nãolocverbal}
+		\end{figure*}
 
 		\begin{longtable}{ p{3cm} | p{1cm} | p{3cm} | p{1cm} }
 			\hline
