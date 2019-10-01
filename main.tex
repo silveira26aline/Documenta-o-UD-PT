@@ -129,17 +129,17 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 
 \section{Verbos auxiliares}\label{sec:verbosauxiliares}
 
-	Verbos auxiliares são classificados como \emph{AUX}. O que conta como um verbo auxiliar é alvo de discussão nas gramáticas do português (\citet{elvis2019locverbal}). De modo geral, classificamos como verbos auxiliares os verbos de ligação (\fullref{sec:verbosdeligação}), o verbo auxiliar na voz passiva (\fullref{sec:servozpassiva}), as locuções de tempo composto (\fullref{sec:auxtempocomposto}), e as locuções verbais aspectuais e modais (\fullref{sec:auxaspecto}).
+	Verbos auxiliares são classificados como \emph{AUX}. O que conta como um verbo auxiliar é alvo de discussão nas gramáticas do português (\citet{elvis2019locverbal}). De modo geral, classificamos como verbos auxiliares os verbos de ligação (\fullref{sec:verbosdeligacao}), o verbo auxiliar na voz passiva (\fullref{sec:servozpassiva}), as locuções de tempo composto (\fullref{sec:auxtempocomposto}), e as locuções verbais aspectuais e modais (\fullref{sec:auxaspecto}).
 	
 	Via de regra, verbos auxiliares (\emph{AUX}) não podem ter dependentes, e dependem de um verbo principal (\emph{VERB}). O deprel pode ser \emph{cop}, \emph{aux} ou \emph{aux:pass}, de acordo com a função sintática.
 
 	\fullref{tab:aux}
 
-	\fullref{tab:verbosdeligação}
+	\fullref{tab:verbosdeligacao}
 
 	\fullref{tab:vozpassiva}
 	
-	\fullref{tab:locuçõesverbais}
+	\fullref{tab:locucoesverbais}
 
 	\fullref{tab:auxphrasalverb}
 
@@ -210,13 +210,13 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 	\end{table}
 
 
-	\subsection{Verbos de ligação}\label{sec:verbosdeligação}
+	\subsection{Verbos de ligação}\label{sec:verbosdeligacao}
 	
 		Apenas os verbos \say{ser} e \say{estar} são considerados verbos de ligação, e portanto serão sempre anotados como \textit{AUX}. Os demais verbos que a GT costuma elencar como verbo de ligação (parecer, permanecer, etc.) são anotados como \textit{VERB}. Os verbos de ligação \textit{AUX} terão relação sintática \emph{cop}, e nunca poderão ser núcleo de uma oração (Xx) nem conter dependentes.
 
 		\fullref{dep:serAUX}
 
-		\fullref{tab:verbosdeligação}
+		\fullref{tab:verbosdeligacao}
 		
 		\begin{figure*}[htbp]
 		    \centering
@@ -246,7 +246,7 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 				ser & 105\\\hline
 			\end{tabular}
 			\caption{Lista das 2 palavras que ocorrem 138 vezes como verbo de ligação (\emph{AUX/cop}) no Bosque-UD}
-			\label{tab:verbosdeligação}
+			\label{tab:verbosdeligacao}
 		\end{table}
 
 
@@ -298,7 +298,7 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 
 		\fullref{dep:auxtempocomposto}
 
-		\fullref{tab:locuçõesverbais}
+		\fullref{tab:locucoesverbais}
 
 		\begin{figure*}[htbp]
 			\centering
@@ -387,7 +387,7 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 				\end{tabular}
 			}
 			\caption{Lista das 23 palavras que ocorrem 2256 vezes como locução verbal (\emph{AUX/aux}) no Bosque-UD}
-			\label{tab:locuçõesverbais}
+			\label{tab:locucoesverbais}
 		\end{table}
 
 
@@ -395,7 +395,7 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 
 		Confira um exemplo de locução verbal aspectual na \fullref{dep:auxphrasalverb}, e modal na \fullref{dep:auxmodal}.
 
-		\fullref{tab:locuçõesverbais}
+		\fullref{tab:locucoesverbais}
 
 		Segundo as gramáticas, o que distingue a locução verbal aspectual da modal é que, na primeira, o verbo auxiliar caracteriza a temporalidade da ação do verbo principal, e na segunda, o verbo auxiliar caracteriza um julgamento do enunciador sobre a ação do verbo principal. Alguns gramáticos divergem sobre como a classificação se dá, portanto apenas herdamos, no Bosque-UD, o que já era a anotação originária do PALAVRAS \citep{bick2000parsing}, e resolvemos não modificá-la.
 
@@ -592,9 +592,9 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 
 		Ainda segundo as decisões do PALAVRAS \citep{bick2000parsing}, há outras tantas colocações de dois verbos que não são locuções verbais. Portanto, são todos casos de verbos plenos, de upos \emph{VERB}, em que o segundo verbo é dependente do primeiro, como oração substantiva objetiva reduzida de infinitivo (Xx).
 
-		\fullref{dep:nãolocverbal}
+		\fullref{dep:naolocverbal}
 
-		\fullref{tab:nãolocverbal}
+		\fullref{tab:naolocverbal}
 
 		\begin{figure*}[htbp]
 			\centering
@@ -616,7 +616,7 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 				\depedge{4}{8}{obl}
 			\end{dependency}
 			\caption{Muitos pintores \emph{quiseram aprender a pintar} com ele}
-			\label{dep:nãolocverbal}
+			\label{dep:naolocverbal}
 		\end{figure*}
 
 		\begin{longtable}{ p{3cm} | p{1cm} | p{3cm} | p{1cm} }
@@ -819,13 +819,13 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 			visar & 5 & virar & 1\\\hline
 			voltar & 1 & voltar & 1\\\hline
 			\caption{Lista dos 196 verbos plenos que ocorrem 1150 vezes como \emph{pais} de uma colocação verbal no Bosque-UD}
-			\label{tab:nãolocverbal}
+			\label{tab:naolocverbal}
 		\end{longtable}
 
 
 \section{Numerais}\label{sec:numerais}
 
-
+\subsection{title}
 
 \subsection{\textit{Primeiro} lugar: adjetivo ou numeral?}\label{sec:adjounum}
 
