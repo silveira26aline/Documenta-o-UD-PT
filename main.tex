@@ -202,7 +202,7 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 
 	\subsection{Locuções verbais de tempo composto}\label{sec:auxtempocomposto}
 
-		Segundo as gramáticas, são locuções verbais de tempo composto aquelas que têm como verbo auxiliar \say{ter}, \say{haver} e, para nós, também \say{ir}. 
+		Segundo as gramáticas, são locuções verbais de tempo composto aquelas que têm como verbo auxiliar \say{ter}, \say{haver} e, para nós, também \say{ir}.
 
 		\fullref{dep:auxtempocomposto}
 
@@ -241,7 +241,7 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 
 		Segundo as gramáticas, o que distingue a locução verbal aspectual da modal é que, na primeira, o verbo auxiliar caracteriza a temporalidade da ação do verbo principal, e na segunda, o verbo auxiliar caracteriza um julgamento do enunciador sobre a ação do verbo principal. Alguns gramáticos divergem sobre como a classificação se dá, portanto apenas herdamos, no Bosque-UD, o que já era a anotação originária do PALAVRAS \citep{bick2000parsing}, e resolvemos não modificá-la.
 
-		Repare que, nos casos de locução verbal aspectual, geralmente há uma partícula interveniente no meio da locução, como na \fullref{dep:auxphrasalverb}, em que há um \say{a} entre \say{começar} e \say{ouvir}. Encaramos que estamos diante de um fenômeno de \emph{phrasal verb}, uma MWE do tipo \emph{AUX}, como sugerido em \citet{elvis2019locverbal}. Na frase, \emph{vai ouvir} é uma locução verbal de tempo composto (\fullref{sec:auxtempocomposto}), e \say{começar a ouvir} é uma locução verbal aspectual, sendo \say{começar a} uma expressão multi-palavra (MWE) do tipo auxiliar.
+		Nos casos de locução verbal aspectual, geralmente há uma partícula interveniente no meio da locução, como na \fullref{dep:auxphrasalverb}, em que há um \say{a} entre \say{começar} e \say{ouvir}. Encaramos que estamos diante de um fenômeno de \emph{phrasal verb}, uma MWE do tipo \emph{AUX}, como sugerido em \citet{elvis2019locverbal}. Na frase, \emph{vai ouvir} é uma locução verbal de tempo composto (\fullref{sec:auxtempocomposto}), e \say{começar a ouvir} é uma locução verbal aspectual, sendo \say{começar a} uma expressão multi-palavra (MWE) do tipo auxiliar.
 
 		\fullref{tab:auxphrasalverb}
 
@@ -382,74 +382,173 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 
 \section{Numerais}\label{sec:numerais}
 
-\subsection{Números compostos}
-
-	Números compostos podem conter \textit{upos} \say{NUM}, \say{CCONJ} e \say{ADP}. Quando o número composto modifica um substantivo, o primeiro número deve se subordinar ao substantivo como \say{nummod}; quando há um sintagma preposicionado, o primeiro número do número composto será o \textit{head}, e o substantivo, \say{nmod} do número. Além disso, deve-se notar que o primeiro número deve receber os \textit{misc} \say{MWE} e \say{MWEPOS}.
+	Numerais cardinais (360) e fracionários (dois terços) devem ser anotados como de upos \emph{NUM}, sejam por extenso ou em algarismos. Numerais multiplicativos (dobro, triplo), por outro lado, devem ser anotados como de upos \emph{NUM}.
 	
-	\fullref{dep:trintaesete}
-
-	\fullref{dep:montantede}
+	Numerais coletivos (como \say{dezenas}, \say{centenas}, \say{milhares}, etc.), no corpus Bosque-UD, podem estar anotados de duas formas diferentes: como \emph{NUM}, caso seja um número exato (\say{duas centenas}, \say{dois bilhões}), ou como \emph{NOUN}, quando é indefinido (\say{centenas de pessoas}).
 	
-	\begin{figure*}[htbp]
-		\centering
-		\vspace{.8cm}
-		\begin{dependency}
-			\begin{deptext}
-				NUM \& CCONJ \& NUM \\
-				Trinta \& e \& sete \\
-				trinta \& e \& sete \\
-				MWE=trinta\_e\_sete \& \& \\
-				MWEPOS=NUM \& \& \\
-			\end{deptext}
-			\depedge{1}{2}{flat}
-			\depedge{1}{3}{flat}
-			\deproot{1}{root}
-		\end{dependency}
-		\caption{\textit{Trinta e sete}}
-		\label{dep:trintaesete}
-	\end{figure*}
-
-	\begin{figure*}[htbp]
-		\centering
-		\vspace{.8cm}
-		\begin{dependency}
-			\begin{deptext}
-				NOUN \& ADP \& NUM \& NUM \& ADP \& NOUN \\
-				Montante \& de \& 1300 \& milhões \& de \& dólares \\
-				montante \& de \& 1300 \& milhão \& de \& dólar \\
-				\& \& MWE=1300\_milhões \& \& \& \\
-				\& \& MWEPOS=NUM \& \& \& \\
-			\end{deptext}
-			\depedge{3}{2}{case}
-			\depedge{3}{4}{flat}
-			\deproot{1}{root}
-			\depedge{1}{3}{nmod}
-			\depedge{6}{5}{case}
-			\depedge{3}{6}{nmod}
-		\end{dependency}
-		\caption{Montante de \textit{1300 milhões de dólares}}
-		\label{dep:montantede}
-	\end{figure*}
-
-\subsection{\textit{Primeiro} lugar: adjetivo ou numeral?}\label{sec:adjounum}
-
-	Numerais ordinais escritos por extenso devem ser anotados como \emph{ADJ}, e recebem a feature \emph{NumType=Ord}, como na \fullref{dep:primeiratentativa}.
+	Numerais ordinais devem ser anotados como \textit{ADJ} (\fullref{sec:adjounum}).
 	
-	\begin{figure*}[htbp]
-	    \centering
-	    \vspace{.8cm}
-	    \begin{dependency}
-	    \begin{deptext}
-	    ADJ \& NOUN \\
-	    primeira \& tentativa \\
-	    primeiro \& tentativa \\
-	    NumType=Ord \& \\
-	    \end{deptext}
-	    \depedge{2}{1}{amod}
-	    \deproot{2}{root}
-	    \end{dependency}
-	    \caption{Anotação do sintagma \textit{primeira tentativa}}\label{dep:primeiratentativa}
-	\end{figure*}
+	Ver também: \fullref{sec:numeroscompostos}
+
+	\subsection{Números compostos}\label{sec:numeroscompostos}
+	
+		Números compostos podem conter upos \emph{NUM}, \emph{CCONJ} e \emph{ADP}. Quando o número composto modifica um substantivo, o primeiro número deve se subordinar ao substantivo como \say{nummod}; quando há um sintagma preposicionado, o primeiro número do número composto será o head, e o substantivo, \emph{nmod} do número. Além disso, deve-se notar que o primeiro número deve receber no misc \emph{MWE} e \emph{MWEPOS}.
+		
+		\fullref{dep:trintaesete}
+	
+		\fullref{dep:montantede}
+		
+		\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					NUM \& CCONJ \& NUM \\
+					Trinta \& e \& sete \\
+					trinta \& e \& sete \\
+					MWE=trinta\_e\_sete \& \& \\
+					MWEPOS=NUM \& \& \\
+				\end{deptext}
+				\depedge{1}{2}{flat}
+				\depedge{1}{3}{flat}
+				\deproot{1}{root}
+			\end{dependency}
+			\caption{\textit{Trinta e sete}}
+			\label{dep:trintaesete}
+		\end{figure*}
+	
+		\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					NOUN \& ADP \& NUM \& NUM \& ADP \& NOUN \\
+					Montante \& de \& 1300 \& milhões \& de \& dólares \\
+					montante \& de \& 1300 \& milhão \& de \& dólar \\
+					\& \& MWE=1300\_milhões \& \& \& \\
+					\& \& MWEPOS=NUM \& \& \& \\
+				\end{deptext}
+				\depedge{3}{2}{case}
+				\depedge{3}{4}{flat}
+				\deproot{1}{root}
+				\depedge{1}{3}{nummod}
+				\depedge{6}{5}{case}
+				\depedge{3}{6}{nmod}
+			\end{dependency}
+			\caption{Montante de \textit{1300 milhões de dólares}}
+			\label{dep:montantede}
+		\end{figure*}
+	
+	\subsection{\textit{R\$ 50}: quem é o pai?}\label{sec:rs50}
+	
+		Quando há a inserção de símbolos como \fullref{dep:rs50}, \fullref{dep:us50} ou \fullref{dep:50porcento}, o símbolo deve ser o head. No caso de números coletivos (\fullref{dep:2centenas}), o coletivo será o head.
+		
+		\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					SYM \& NUM \\
+					R\$ \& 50 \\
+					R\$ \& 50 \\
+				\end{deptext}
+				\depedge{1}{2}{nummod}
+				\deproot{1}{root}
+			\end{dependency}
+			\caption{\textit{R\$ 50}}
+			\label{dep:rs50}
+		\end{figure*}
+	
+		\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					SYM \& NUM \\
+					U\$ \& 50 \\
+					U\$ \& 50 \\
+				\end{deptext}
+				\depedge{1}{2}{nummod}
+				\deproot{1}{root}
+			\end{dependency}
+			\caption{\textit{U\$ 50}}
+			\label{dep:us50}
+		\end{figure*}
+	
+		\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					NUM \& SYM \\
+					50 \& \% \\
+					50 \& \% \\
+				\end{deptext}
+				\depedge{2}{1}{nummod}
+				\deproot{2}{root}
+			\end{dependency}
+			\caption{\textit{50\%}}
+			\label{dep:50porcento}
+		\end{figure*}
+	
+		\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					NUM \& NUM \\
+					2 \& centenas \\
+					2 \& centena \\
+				\end{deptext}
+				\depedge{2}{1}{nummod}
+				\deproot{2}{root}
+			\end{dependency}
+			\caption{\textit{2 centenas}}
+			\label{dep:2centenas}
+		\end{figure*}
+	
+	\subsection{\textit{50\% das pessoas}: quem é o pai?}\label{sec:50porcentodaspessoas}
+	
+		Sempre que houver sintagma preposicionado, o sintagma anterior será o head, como em \fullref{dep:50porcentodaspessoas} (onde o símbolo é o head, segundo \fullref{sec:rs50}).
+	
+		\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					NUM \& SYM \& ADP \& DET \& NOUN \\
+					50 \& \% \& de \& as \& pessoas \\
+					50 \& \% \& de \& as \& pessoa \\
+				\end{deptext}
+				\depedge{2}{1}{nummod}
+				\deproot{2}{root}
+				\depedge{5}{3}{case}
+				\depedge{5}{4}{det}
+				\depedge{2}{5}{nmod}
+			\end{dependency}
+			\caption{\textit{50\% das pessoas}}
+			\label{dep:50porcentodaspessoas}
+		\end{figure*}
+	
+	\subsection{\textit{Primeiro} lugar: adjetivo ou numeral?}\label{sec:adjounum}
+	
+		Numerais ordinais escritos por extenso devem ser anotados como \emph{ADJ}, e recebem a feature \emph{NumType=Ord}, como na \fullref{dep:primeiratentativa}.
+		
+		\begin{figure*}[htbp]
+		    \centering
+		    \vspace{.8cm}
+		    \begin{dependency}
+		    \begin{deptext}
+		    ADJ \& NOUN \\
+		    Primeira \& tentativa \\
+		    primeiro \& tentativa \\
+		    NumType=Ord \& \\
+		    \end{deptext}
+		    \depedge{2}{1}{amod}
+		    \deproot{2}{root}
+		    \end{dependency}
+		    \caption{\textit{Primeira tentativa}}\label{dep:primeiratentativa}
+		\end{figure*}
 
 \chapter{Atributos morfológicos (feats)}\label{sec:feats}
 
