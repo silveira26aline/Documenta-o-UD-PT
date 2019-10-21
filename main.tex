@@ -384,6 +384,53 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 
 \subsection{Números compostos}
 
+	Números compostos podem conter \textit{upos} \say{NUM}, \say{CCONJ} e \say{ADP}. Quando o número composto modifica um substantivo, o primeiro número deve se subordinar ao substantivo como \say{nummod}; quando há um sintagma preposicionado, o primeiro número do número composto será o \textit{head}, e o substantivo, \say{nmod} do número. Além disso, deve-se notar que o primeiro número deve receber os \textit{misc} \say{MWE} e \say{MWEPOS}.
+	
+	\fullref{dep:trintaesete}
+
+	\fullref{dep:montantede}
+	
+	\begin{figure*}[htbp]
+		\centering
+		\vspace{.8cm}
+		\begin{dependency}
+			\begin{deptext}
+				NUM \& CCONJ \& NUM \\
+				Trinta \& e \& sete \\
+				trinta \& e \& sete \\
+				MWE=trinta\_e\_sete \& \& \\
+				MWEPOS=NUM \& \& \\
+			\end{deptext}
+			\depedge{1}{2}{flat}
+			\depedge{1}{3}{flat}
+			\deproot{1}{root}
+		\end{dependency}
+		\caption{\textit{Trinta e sete}}
+		\label{dep:trintaesete}
+	\end{figure*}
+
+	\begin{figure*}[htbp]
+		\centering
+		\vspace{.8cm}
+		\begin{dependency}
+			\begin{deptext}
+				NOUN \& ADP \& NUM \& NUM \& ADP \& NOUN \\
+				Montante \& de \& 1300 \& milhões \& de \& dólares \\
+				montante \& de \& 1300 \& milhão \& de \& dólar \\
+				\& \& MWE=1300\_milhões \& \& \& \\
+				\& \& MWEPOS=NUM \& \& \& \\
+			\end{deptext}
+			\depedge{3}{2}{case}
+			\depedge{3}{4}{flat}
+			\deproot{1}{root}
+			\depedge{1}{3}{nmod}
+			\depedge{6}{5}{case}
+			\depedge{3}{6}{nmod}
+		\end{dependency}
+		\caption{Montante de \textit{1300 milhões de dólares}}
+		\label{dep:montantede}
+	\end{figure*}
+
 \subsection{\textit{Primeiro} lugar: adjetivo ou numeral?}\label{sec:adjounum}
 
 	Numerais ordinais escritos por extenso devem ser anotados como \emph{ADJ}, e recebem a feature \emph{NumType=Ord}, como na \fullref{dep:primeiratentativa}.
