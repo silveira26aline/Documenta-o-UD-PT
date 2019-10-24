@@ -584,6 +584,91 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 
 	\hyperlink{toc}{Ir para tabela de conteúdos\\}
 
+\section{Sujeito da oração}
+
+Caso seja nominal, o sujeito será anotado como \emph{nsubj}.
+
+	\fullref{dep:nsubj1}
+
+	\fullref{fig:nsubj2}
+
+\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					DET \& NOUN \& VERB \\
+					O \& McDonald's \& proibiu \\
+					o \& McDonald's \& proibir \\
+				\end{deptext}
+				\depedge{2}{1}{det}
+				\depedge{3}{2}{nsubj}
+				\deproot{3}{root}
+			\end{dependency}
+			\caption{O \emph{McDonald's} proibiu}
+			\label{dep:nsubj1}
+		\end{figure*}
+
+\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					VERB \& NOUN \& ADV \\
+					Surgem \& problemas \& diariamente \\
+					surgir \& problema \& diariamente \\
+				\end{deptext}
+				\deproot{1}{root}
+				\depedge{1}{2}{nsubj}
+				\depedge{1}{3}{advmod}
+			\end{dependency}
+			\caption{Surgem \emph{problemas} diariamente}
+			\label{fig:nsubj2}
+		\end{figure*}
+
+Caso seja oracional, o sujeito será anotado como \emph{csubj}.
+
+	\fullref{fig:csubj1}
+
+	\fullref{fig:csubj2}
+
+\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					AUX \& ADJ \& VERB \\
+					Será \& prematuro \& falar \\
+					ser \& prematuro \& falar \\
+				\end{deptext}
+				\depedge{2}{1}{cop}
+				\deproot{2}{root}
+				\depedge{2}{3}{csubj}
+			\end{dependency}
+			\caption{Será prematuro \emph{falar}}
+			\label{fig:csubj1}
+		\end{figure*}
+
+\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					VERB \& ADJ \& ADV \& AUX \& VERB \\
+					Pareceu \& estranho \& nunca \& ter \& lido \\
+					parecer \& estranho \& nunca \& ter \& ler \\
+				\end{deptext}
+				\deproot{1}{root}
+				\depedge{1}{2}{xcomp}
+				\depedge{1}{3}{advmod}
+				\depedge{5}{4}{aux}
+				\depedge{1}{5}{csubj}
+			\end{dependency}
+			\caption{Pareceu estranho nunca ter \emph{lido}}
+			\label{fig:csubj2}
+		\end{figure*}
+
+OBS.: Em construções equacionais como \say{O problema é haver demasiada interferência do Governo}, não se considera \say{haver} como \emph{csubj}, mas como \emph{ccomp}. (ver Xx)
 
 \section{Estruturas comparativas}
 
@@ -613,7 +698,7 @@ Estruturas comparativas são de anotação complexa, o que se verifica pela exis
 	\subsection{É que}
 
 
-	A construção \say{é que} pode aparecer de duas maneiras no corpus: marcada ou não como MWE. Como MWE, \say{é que} é uma ocorrência típica do discurso oral, sem ligação clara com a estrutura da oração. Por outro lado, \say{é} e \say{que} são independentes entre si quando introduzem uma oração subordinada substantiva predicativa ou subjetiva. (ver Xx)
+	A construção \say{é que} pode aparecer de duas maneiras: marcada ou não como MWE. Como MWE, \say{é que} é uma ocorrência típica do discurso oral, sem ligação clara com a estrutura da oração. Por outro lado, \say{é} e \say{que} são independentes entre si quando introduzem uma oração subordinada substantiva predicativa ou subjetiva. (ver Xx)
 
 Quando \say{é que} tem esse efeito discursivo, anota-se da seguinte maneira: \newline
 
