@@ -586,89 +586,310 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 
 \section{Sujeito da oração}
 
-Caso seja nominal, o sujeito será anotado como \emph{nsubj}.
+	\subsection{Caso seja nominal}
+		O sujeito será anotado com a deprel \emph{nsubj}. (ver Xx - nsubj:pass)
+	
+		\fullref{dep:nsubj1}
+	
+		\fullref{fig:nsubj2}
+	
+		\begin{figure*}[htbp]
+					\centering
+					\vspace{.8cm}
+					\begin{dependency}
+						\begin{deptext}
+							DET \& NOUN \& VERB \\
+							O \& McDonald's \& proibiu \\
+							o \& McDonald's \& proibir \\
+						\end{deptext}
+						\depedge{2}{1}{det}
+						\depedge{3}{2}{nsubj}
+						\deproot{3}{root}
+					\end{dependency}
+					\caption{O \emph{McDonald's} proibiu}
+					\label{dep:nsubj1}
+				\end{figure*}
+		
+		\begin{figure*}[htbp]
+					\centering
+					\vspace{.8cm}
+					\begin{dependency}
+						\begin{deptext}
+							VERB \& NOUN \& ADV \\
+							Surgem \& problemas \& diariamente \\
+							surgir \& problema \& diariamente \\
+						\end{deptext}
+						\deproot{1}{root}
+						\depedge{1}{2}{nsubj}
+						\depedge{1}{3}{advmod}
+					\end{dependency}
+					\caption{Surgem \emph{problemas} diariamente}
+					\label{fig:nsubj2}
+				\end{figure*}
+	
+	\subsection{Caso seja oracional} 
+		O sujeito será anotado com a deprel \emph{csubj}, que corresponde a uma oração subordinada substantiva subjetiva.
+	
+		\fullref{fig:csubj1}
+	
+		\fullref{fig:csubj2}
+	
+		\begin{figure*}[htbp]
+					\centering
+					\vspace{.8cm}
+					\begin{dependency}
+						\begin{deptext}
+							AUX \& ADJ \& VERB \\
+							Será \& prematuro \& falar \\
+							ser \& prematuro \& falar \\
+						\end{deptext}
+						\depedge{2}{1}{cop}
+						\deproot{2}{root}
+						\depedge{2}{3}{csubj}
+					\end{dependency}
+					\caption{Será prematuro \emph{falar}}
+					\label{fig:csubj1}
+				\end{figure*}
+	
+		\begin{figure*}[htbp]
+					\centering
+					\vspace{.8cm}
+					\begin{dependency}
+						\begin{deptext}
+							VERB \& ADJ \& ADV \& AUX \& VERB \\
+							Pareceu \& estranho \& nunca \& ter \& lido \\
+							parecer \& estranho \& nunca \& ter \& ler \\
+						\end{deptext}
+						\deproot{1}{root}
+						\depedge{1}{2}{xcomp}
+						\depedge{5}{3}{advmod}
+						\depedge{5}{4}{aux}
+						\depedge{1}{5}{csubj}
+					\end{dependency}
+					\caption{Pareceu estranho nunca ter \emph{lido}}
+					\label{fig:csubj2}
+				\end{figure*}
+	
+	Em construções como \fullref{dep:serVERB}, não se considera \say{haver} como \emph{csubj}, mas como \emph{ccomp}, uma vez que o verbo \say{ser} é pleno (\fullref{sec:serpleno}).
 
-	\fullref{dep:nsubj1}
+\section{Adjuntos do verbo}
 
-	\fullref{fig:nsubj2}
+	\subsection{Adjunto adverbial}
 
-\begin{figure*}[htbp]
-			\centering
-			\vspace{.8cm}
-			\begin{dependency}
-				\begin{deptext}
-					DET \& NOUN \& VERB \\
-					O \& McDonald's \& proibiu \\
-					o \& McDonald's \& proibir \\
-				\end{deptext}
-				\depedge{2}{1}{det}
-				\depedge{3}{2}{nsubj}
-				\deproot{3}{root}
-			\end{dependency}
-			\caption{O \emph{McDonald's} proibiu}
-			\label{dep:nsubj1}
-		\end{figure*}
+		\subsubsection{Caso seja advérbio}
+		
+			O advérbio, que recebe upos \emph{ADV}, será anotado com a deprel \emph{advmod}. 
 
-\begin{figure*}[htbp]
-			\centering
-			\vspace{.8cm}
-			\begin{dependency}
-				\begin{deptext}
-					VERB \& NOUN \& ADV \\
-					Surgem \& problemas \& diariamente \\
-					surgir \& problema \& diariamente \\
-				\end{deptext}
-				\deproot{1}{root}
-				\depedge{1}{2}{nsubj}
-				\depedge{1}{3}{advmod}
-			\end{dependency}
-			\caption{Surgem \emph{problemas} diariamente}
-			\label{fig:nsubj2}
-		\end{figure*}
+			\fullref{fig:advmod1}
+	
+			\fullref{fig:advmod2}
+	
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						DET\& NOUN\& AUX\& VERB\& ADV\\
+						A\& limpeza\& é\& feita\& diariamente\\
+						o\& limpeza\& ser\& fazer\& diariamente\\
+					\end{deptext}
+					
+					\depedge{2}{1}{det}
+					\depedge{4}{2}{nsubj:pass}
+					\depedge{4}{3}{aux:pass}
+					\deproot{4}{root}
+					\depedge{4}{5}{advmod}
+				\end{dependency}
+				\caption{A limpeza é feita \emph{diariamente}}
+				\label{fig:advmod1}
+			\end{figure*}
+			
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						ADV\& VERB\& NOUN\& ADV\& ADJ\\
+						Sempre\& tivemos\& canções\& mais\& lentas\\
+						sempre\& ter\& canção\& mais\& lento\\
+					\end{deptext}
+					
+					\depedge{2}{1}{advmod}
+					\deproot{2}{root}
+					\depedge{2}{3}{obj}
+					\depedge{5}{4}{advmod}
+					\depedge{3}{5}{nmod}
+				\end{dependency}
+				\caption{\emph{Sempre} tivemos canções \emph{mais} lentas}
+				\label{fig:advmod2}
+			\end{figure*}
+	
+		\subsubsection{Caso seja nome}
+			
+			 O núcleo nominal de um adjunto adverbial (substantivo, pronome, sintagma nominal) será anotado como \emph{obl}.
+			
+			\fullref{fig:obl1}
 
-Caso seja oracional, o sujeito será anotado como \emph{csubj}.
+			\fullref{fig:obl2} 
 
-	\fullref{fig:csubj1}
+			\fullref{fig:obl3} \newline
 
-	\fullref{fig:csubj2}
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						DET\& NOUN\& ADP\& DET\& NOUN\& VERB\& ADP\& DET\& NOUN\\
+						A\& ideia\& para\& o\& livro\& surgiu\& após\& uma\& entrevista\\
+						o\& ideia\& para\& o\& livro\& surgir\& após\& um\& entrevista\\
+					\end{deptext}
+					
+					\depedge{2}{1}{det}
+					\depedge{6}{2}{nsubj}
+					\depedge{5}{3}{case}
+					\depedge{5}{4}{det}
+					\depedge{2}{5}{nmod}
+					\deproot{6}{root}
+					\depedge{9}{7}{case}
+					\depedge{9}{8}{det}
+					\depedge{6}{9}{obl}
+				\end{dependency}
+				\caption{A ideia para o livro surgiu após uma \emph{entrevista}}
+				\label{fig:obl1}
+			\end{figure*}
+			
 
-\begin{figure*}[htbp]
-			\centering
-			\vspace{.8cm}
-			\begin{dependency}
-				\begin{deptext}
-					AUX \& ADJ \& VERB \\
-					Será \& prematuro \& falar \\
-					ser \& prematuro \& falar \\
-				\end{deptext}
-				\depedge{2}{1}{cop}
-				\deproot{2}{root}
-				\depedge{2}{3}{csubj}
-			\end{dependency}
-			\caption{Será prematuro \emph{falar}}
-			\label{fig:csubj1}
-		\end{figure*}
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						ADV\& ADP\& DET\& NOUN\& ADJ\\
+						Independentemente\& de\& o\& poder\& civil\\
+						independentemente\& de\& o\& poder\& civil\\
+					\end{deptext}					
 
-\begin{figure*}[htbp]
-			\centering
-			\vspace{.8cm}
-			\begin{dependency}
-				\begin{deptext}
-					VERB \& ADJ \& ADV \& AUX \& VERB \\
-					Pareceu \& estranho \& nunca \& ter \& lido \\
-					parecer \& estranho \& nunca \& ter \& ler \\
-				\end{deptext}
-				\deproot{1}{root}
-				\depedge{1}{2}{xcomp}
-				\depedge{1}{3}{advmod}
-				\depedge{5}{4}{aux}
-				\depedge{1}{5}{csubj}
-			\end{dependency}
-			\caption{Pareceu estranho nunca ter \emph{lido}}
-			\label{fig:csubj2}
-		\end{figure*}
+					\deproot{1}{root}
+					\depedge{4}{2}{case}
+					\depedge{4}{3}{det}
+					\depedge{1}{4}{obl}
+					\depedge{4}{5}{amod}
+				\end{dependency}
+				\caption{Independentemente do \emph{poder} civil}
+				\label{fig:obl2}
+			\end{figure*}
 
-OBS.: Em construções equacionais como \say{O problema é haver demasiada interferência do Governo}, não se considera \say{haver} como \emph{csubj}, mas como \emph{ccomp}. (ver Xx)
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						NOUN\& VERB\& ADP\& NOUN\& ADP\& DET\& NOUN\\
+						Terrenos\& entregues\& como\& pagamento\& de\& uma\& dívida\\
+						terrreno\& entregar\& como\& pagamento\& de\& um\& dívida\\
+					\end{deptext}
+					
+					\deproot{1}{root}
+					\depedge{1}{2}{acl}
+					\depedge{4}{3}{case}
+					\depedge{2}{4}{obl}
+					\depedge{7}{5}{case}
+					\depedge{7}{6}{det}
+					\depedge{4}{7}{nmod}
+		
+				\end{dependency}
+				\caption{Terrenos entregues como \emph{pagamento} de uma dívida}
+				\label{fig:obl3}
+			\end{figure*}
+
+			A relação \emph{obl:agent} é utilizada para indicar o agente de um verbo na voz passiva. (ver Xx) Além disso, a relação de \emph{obl} também funciona como complemento de adjetivo. (ver Xx)
+
+		\subsubsection{Caso seja verbo}
+			A oração subordinada adverbial será anotada como \emph{advcl}, não havendo diferenciação semântica (temporal, causal, concessiva, final, etc).
+
+			\fullref{fig:advcl1}
+
+			\fullref{fig:advcl2}
+			
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						SCONJ\& VERB\& DET\& NOUN\& PUNCT\& AUX\& DET\& ADJ\& NOUN\\
+						Como\& notou\& o\& jornalista\& ,\& é\& uma\& boa\& grana\\
+						como\& notar\& o\& jornalista\& ,\& ser\& um\& bom\& grana\\
+					\end{deptext}
+					
+					\depedge{2}{1}{mark}
+					\depedge{9}{2}{advcl}
+					\depedge{4}{3}{det}
+					\depedge{2}{4}{nsubj}
+					\depedge{2}{5}{punct}
+					\depedge{9}{6}{cop}
+					\depedge{9}{7}{det}
+					\depedge{9}{8}{amod}
+					\deproot{9}{root}
+				\end{dependency}
+				\caption{Como \emph{notou} o jornalista, é uma boa grana}
+				\label{fig:advcl1}
+			\end{figure*}
+
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						SCONJ\& PROPN\& VERB\& SCONJ\& VERB\& PUNCT\& VERB\& NOUN\\
+						Quando\& Sarney\& começou\& a\& escrever\& ,\& chegaram\& protestos\\
+						quando\& Sarney\& começar\& a\& escrever\& ,\& chegar\& protesto\\
+					\end{deptext}
+					
+					\depedge{3}{1}{mark}
+					\depedge{3}{2}{nsubj}
+					\depedge{7}{3}{advcl}
+					\depedge{5}{4}{mark}
+					\depedge{3}{5}{xcomp}
+					\depedge{3}{6}{punct}
+					\deproot{7}{root}
+					\depedge{7}{8}{nsubj}
+				
+				\end{dependency}
+				\caption{Quando Sarney \emph{começou} a escrever, chegaram protestos}
+				\label{fig:advcl2}
+			\end{figure*}
+
+		\subsubsection{\emph{Teve uma relação extraconjugal com Monica Lewinsky}}
+			Consideramos que \say{Monica} apontará para o verbo, e não para o nome. Sendo assim, o pai de \say{Monica} será \say{teve} e sua deprel será \emph{obl}, . 
+			
+			\fullref{fig:monica}
+			
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						VERB\& DET\& NOUN\& ADJ\& ADP\& PROPN\& PROPN\\
+						Teve\& uma\& relação\& extraconjugal\& com\& Monica\& Lewinsky\\
+						ter\& um\& relação\& extraconjugal\& com\& Monica\& Lewinsky\\
+					\end{deptext}
+					
+					\deproot{1}{root}
+					\depedge{3}{2}{det}
+					\depedge{1}{3}{obj}
+					\depedge{3}{4}{amod}
+					\depedge{6}{5}{case}
+					\depedge{1}{6}{obl}
+					\depedge{6}{7}{flat:name}
+				
+				\end{dependency}
+				\caption{Teve uma relação extraconjugal com \emph{Monica} Lewinsky}
+				\label{fig:monica}
+			\end{figure*}
+
+			
+			Nas estruturas comparativas, independente de o núcleo do fragmento ser um verbo ou um nome, ele será anotado com a deprel \emph{advcl}. (ver Xx)
+
 
 \section{Estruturas comparativas}
 
@@ -678,14 +899,14 @@ Estruturas comparativas são de anotação complexa, o que se verifica pela exis
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{imagesDrive/image20.png}
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{imagesDrive/image23.png}
     \caption{Eu coloquei \emph{tanta farinha quanto} a receita pedia}
     \label{fig:comparative1}
     \end{figure}{}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{imagesDrive/image27.png}
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{imagesDrive/image32.png}
     \caption{Martin é o cara \emph{mais inteligente de todos}}
     \label{fig:comparative2}
 \end{figure}{}
@@ -700,19 +921,19 @@ Estruturas comparativas são de anotação complexa, o que se verifica pela exis
 
 	A construção \say{é que} pode aparecer de duas maneiras: marcada ou não como MWE. Como MWE, \say{é que} é uma ocorrência típica do discurso oral, sem ligação clara com a estrutura da oração. Por outro lado, \say{é} e \say{que} são independentes entre si quando introduzem uma oração subordinada substantiva predicativa ou subjetiva. (ver Xx)
 
-Quando \say{é que} tem esse efeito discursivo, anota-se da seguinte maneira: \newline
+Quando \say{é que} tem esse efeito discursivo, anota-se da seguinte maneira:
 
 		É: tem upos \emph{AUX} e deprel \emph{discourse}, e aponta para a head da oração; 
 
-		Que: tem upos \emph{SCONJ} e deprel \emph{fixed}, e aponta para \say{é}. 
+		Que: tem upos \emph{SCONJ} e deprel \emph{fixed}, e aponta para \say{é}. \newline
 
 		\fullref{dep:equeMWE1}
 
 		\fullref{fig:equeMWE2}
 
-		\fullref{fig:equeMWE3}
+		\fullref{fig:equeMWE3} \newline
 
-OBS.: Consideramos \say{Não é que} como MWE.  
+	Igualmente, consideramos \say{Não é que} como MWE.  
 
 \say{\emph{Não é que} o sábio das matrizes encontrou, no PSD, entusiastas seguidores?} 
 
