@@ -379,6 +379,200 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 			\label{dep:naolocverbal}
 		\end{figure*}
 
+\section{Formas participiais: verbo ou adjetivo?}
+
+	A discussão sobre o status das formas participiais, frequentemente ambíguas entre \emph{ADJ} ou \emph{VERB}, é reconhecida na literatura linguística, e não é um fenômeno específico do Português (ver, por exemplo, PROPOR 2018 e Dissert Luiza).
+	
+	No processo de anotação do Bosque-UD, anotamos como \emph{ADJ}:
+
+	\begin{enumerate}
+		\item Palavras que, ainda que tenham um verbo correlato, possuem um sentido bem demarcado como adjetivo. Como essa decisão nem sempre é clara, listam-se alguns casos considerados \emph{ADJ}.		
+
+		\fullref{fig:partadj1}
+
+		\fullref{fig:partadj2}
+
+		\fullref{fig:partadj3}
+
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{imagesDrive/image11.png}
+			\caption{Cabe ao empresário, ao empreendedor, seja pequeno, médio ou grande, criar o ambiente \emph{adequado} para a valorização de um recurso humano com essas qualificações}
+			\label{fig:partadj1}
+		\end{figure}{}		
+		
+		\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						DET\& NOUN\& ADP\& NOUN\& ADJ\& VERB\& ADP\& NOUN\\
+						A\& ideia\& de\& cinema\& engajado\& está\& por\& baixo\\
+						o\& ideia\& de\& cinema\& engajado\& estar\& por\& baixo\\
+					\end{deptext}
+					
+					\depedge{2}{1}{det}
+					\depedge{6}{2}{nsubj}
+					\depedge{4}{3}{case}
+					\depedge{2}{4}{nmod}
+					\depedge{4}{5}{amod}
+					\deproot{6}{root}
+					\depedge{8}{7}{case}
+					\depedge{6}{8}{obl}
+				\end{dependency}
+				\caption{A ideia de cinema \emph{engajado} está por baixo}
+				\label{fig:partadj2}
+			\end{figure*}
+
+
+		\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						PRON\& VERB\& ADP\& ADV\& ADP\& NOUN\& ADJ\\
+						Ele\& vive\& até\& hoje\& de\& forma\& angustiada\\
+						ele\& viver\& até\& hoje\& de\& forma\& angustiado\\
+					\end{deptext}
+					
+					\depedge{2}{1}{nsubj}
+					\deproot{2}{root}
+					\depedge{4}{3}{case}
+					\depedge{2}{4}{advmod}
+					\depedge{6}{5}{case}
+					\depedge{2}{6}{obl}
+					\depedge{6}{7}{amod}
+
+				\end{dependency}
+				\caption{Ele vive até hoje de forma \emph{angustiada}}
+				\label{fig:partadj3}
+			\end{figure*}
+
+		\item Formas participiais que estejam em coordenação com outros adjetivos.
+
+		\fullref{fig:partadj4}
+
+		\fullref{fig:partadj5}
+
+		\fullref{fig:partadj6}
+
+		\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					DET\& NOUN\& ADJ\& CC\& ADV\& ADJ\\
+					Este\& futebol\& automatizado\& e\& excessivamente\& defensivo\\
+					este\& futebol\& automatizado\& e\& excessivamente\& defensivo\\
+				\end{deptext}
+				
+				\depedge{2}{1}{det}
+				\deproot{2}{root}
+				\depedge{2}{3}{amod}
+				\depedge{6}{4}{cc}
+				\depedge{6}{5}{advmod}
+				\depedge{3}{6}{conj}
+
+			\end{dependency}
+			\caption{Este futebol \emph{automatizado} e excessivamente defensivo}
+			\label{fig:partadj4}
+		\end{figure*}
+
+		\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					AUX \& DET \& NOUN \& ADV \& ADJ \& PUNCT \& ADV \& ADJ \& CC \& ADV \& ADJ\\
+					Foi \& uma \& decisão \& muito \& ponderada \& , \& muito \& difícil \& e \& muito \& amadurecida\\
+					ser \& um \& decisão \& muito \& ponderado \& , \& muito \& difícil \& e \& muito \& amadurecido\\
+				\end{deptext}
+				\depedge{3}{1}{cop}
+				\depedge{3}{2}{det}
+				\deproot{3}{root}
+				\depedge{5}{4}{advmod}
+				\depedge{3}{5}{amod}
+				\depedge{8}{6}{punct}
+				\depedge{8}{7}{advmod}
+				\depedge{3}{8}{conj}
+				\depedge{11}{9}{cc}
+				\depedge{11}{10}{advmod}
+				\depedge{3}{11}{conj}
+				
+			\end{dependency}
+			\caption{Foi uma decisão muito \emph{ponderada}, muito difícil e muito amadurecida}
+			\label{fig:partadj5}
+		\end{figure*}
+
+
+		\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					DET\& NOUN\& ADV\& ADJ\& CC\& ADJ\\
+					Um\& coletivo\& tão\& alargado\& e\& dispersivo\\
+					um\& coletivo\& tão\& alargado\& e\& dispersivo\\
+				\end{deptext}
+				
+				\depedge{2}{1}{det}
+				\deproot{2}{root}
+				\depedge{4}{3}{advmod}
+				\depedge{2}{4}{amod}
+				\depedge{6}{5}{cc}
+				\depedge{4}{6}{conj}
+
+			\end{dependency}
+			\caption{Um coletivo tão \emph{alargado} e dispersivo}
+			\label{fig:partadj6}
+		\end{figure*}
+
+    	\end{enumerate}{}
+
+	No processo de anotação do Bosque-UD, anotamos como \emph{VERB} (com deprel \emph{acl}):
+
+		\begin{enumerate}
+		\item Construções em que se pode incluir um agente da passiva sem prejudicar o sentido da frase.
+		
+		\fullref{fig:partadj7}
+
+		\fullref{fig:partadj8}
+
+			\begin{figure}
+			\centering
+			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{imagesDrive/image65.png}
+			\caption{Resta portanto saber se as medidas \emph{anunciadas}, em tese adequadas, terão na prática o efeito que se espera.}
+			\label{fig:partadj7}
+		\end{figure}{}		
+
+			\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					DET \& NOUN \& ADV \& VERB \& AUX \& NOUN \& ADJ \& CC \& NOUN \& ADP \& NOUN\\
+					Os \& serviços \& mais \& procurados \& são \& correio \& eletrônico \& e \& transferência \& de \& arquivos\\
+					o \& serviço \& mais \& procurar \& ser \& correio \& eletrônico \& e \& transferência \& de \& arquivo\\
+				\end{deptext}
+				\depedge{2}{1}{det}
+				\depedge{6}{2}{nsubj}
+				\depedge{4}{3}{advmod}
+				\depedge{2}{4}{acl}
+				\depedge{6}{5}{cop}
+				\deproot{6}{root}
+				\depedge{6}{7}{amod}
+				\depedge{9}{8}{cc}
+				\depedge{6}{9}{conj}
+				\depedge{11}{10}{case}
+				\depedge{9}{11}{nmod}
+				
+			\end{dependency}
+			\caption{Os serviços mais \emph{procurados} são correio eletrônico e transferência de arquivos}
+			\label{fig:partadj8}
+		\end{figure*}		
+			
+		\end{enumerate}
 
 \section{Numerais}\label{sec:numerais}
 
@@ -584,30 +778,466 @@ Para manipular arquivos no formato UD em Python, com as classes Corpus, Sentence
 
 	\hyperlink{toc}{Ir para tabela de conteúdos\\}
 
+\section{Sujeito da oração}\label{sec:suj}
 
+\subsection{Caso seja nominal}
+		O sujeito será anotado com a deprel \emph{nsubj}.  
+	
+		\fullref{dep:nsubj1}
+	
+		\fullref{fig:nsubj2}
+
+		Quando em uma oração na voz passiva, o sujeito deve receber a deprel \emph{nsubj:pass}, como na \fullref{fig:vozpass1}.
+	
+		\begin{figure*}[htbp]
+					\centering
+					\vspace{.8cm}
+					\begin{dependency}
+						\begin{deptext}
+							DET \& NOUN \& VERB \\
+							O \& McDonald's \& proibiu \\
+							o \& McDonald's \& proibir \\
+						\end{deptext}
+						\depedge{2}{1}{det}
+						\depedge{3}{2}{nsubj}
+						\deproot{3}{root}
+					\end{dependency}
+					\caption{O \emph{McDonald's} proibiu}
+					\label{dep:nsubj1}
+				\end{figure*}
+		
+		\begin{figure*}[htbp]
+					\centering
+					\vspace{.8cm}
+					\begin{dependency}
+						\begin{deptext}
+							VERB \& NOUN \& ADV \\
+							Surgem \& problemas \& diariamente \\
+							surgir \& problema \& diariamente \\
+						\end{deptext}
+						\deproot{1}{root}
+						\depedge{1}{2}{nsubj}
+						\depedge{1}{3}{advmod}
+					\end{dependency}
+					\caption{Surgem \emph{problemas} diariamente}
+					\label{fig:nsubj2}
+				\end{figure*}
+	
+	\subsection{Caso seja oracional} 
+		O sujeito será anotado com a deprel \emph{csubj}, que corresponde a uma oração subordinada substantiva subjetiva.
+	
+		\fullref{fig:csubj1}
+	
+		\fullref{fig:csubj2}
+
+		Em construções como \fullref{dep:serVERB}, \say{chegasse} não é \emph{csubj}, mas \emph{ccomp}, uma vez que o verbo \say{ser} é pleno (\fullref{sec:serpleno}).
+	
+		\begin{figure*}[htbp]
+					\centering
+					\vspace{.8cm}
+					\begin{dependency}
+						\begin{deptext}
+							AUX \& ADJ \& VERB \\
+							Será \& prematuro \& falar \\
+							ser \& prematuro \& falar \\
+						\end{deptext}
+						\depedge{2}{1}{cop}
+						\deproot{2}{root}
+						\depedge{2}{3}{csubj}
+					\end{dependency}
+					\caption{Será prematuro \emph{falar}}
+					\label{fig:csubj1}
+		\end{figure*}
+	
+		\begin{figure*}[htbp]
+					\centering
+					\vspace{.8cm}
+					\begin{dependency}
+						\begin{deptext}
+							VERB \& ADJ \& ADV \& AUX \& VERB \\
+							Pareceu \& estranho \& nunca \& ter \& lido \\
+							parecer \& estranho \& nunca \& ter \& ler \\
+						\end{deptext}
+						\deproot{1}{root}
+						\depedge{1}{2}{xcomp}
+						\depedge{5}{3}{advmod}
+						\depedge{5}{4}{aux}
+						\depedge{1}{5}{csubj}
+					\end{dependency}
+					\caption{Pareceu estranho nunca ter \emph{lido}}
+					\label{fig:csubj2}
+		\end{figure*}
+	
+\section{Adjuntos adverbiais}\label{sec:adjadv}
+
+		\subsection{Caso seja advérbio}
+		
+			O advérbio, que recebe upos \emph{ADV}, será anotado com a deprel \emph{advmod}. Poderá modificar \emph{VERB}, \emph{ADJ} ou \emph{ADV}.
+
+			Como exemplo de modificador de \emph{VERB}, observa-se a \fullref{fig:advmod1}.
+
+			Como exemplo de modificador de \emph{ADJ}, observa-se a \fullref{fig:advmod2}.
+
+			Como exemplo de modificador de \emph{ADV}, observa-se a \fullref{fig:advmod3}.
+	
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						DET\& NOUN\& AUX\& VERB\& ADV\\
+						A\& limpeza\& é\& feita\& diariamente\\
+						o\& limpeza\& ser\& fazer\& diariamente\\
+					\end{deptext}
+					
+					\depedge{2}{1}{det}
+					\depedge{4}{2}{nsubj:pass}
+					\depedge{4}{3}{aux:pass}
+					\deproot{4}{root}
+					\depedge{4}{5}{advmod}
+				\end{dependency}
+				\caption{A limpeza é feita \emph{diariamente}}
+				\label{fig:advmod1}
+			\end{figure*}
+			
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						ADV\& VERB\& NOUN\& ADV\& ADJ\\
+						Sempre\& tivemos\& canções\& mais\& lentas\\
+						sempre\& ter\& canção\& mais\& lento\\
+					\end{deptext}
+					
+					\depedge{2}{1}{advmod}
+					\deproot{2}{root}
+					\depedge{2}{3}{obj}
+					\depedge{5}{4}{advmod}
+					\depedge{3}{5}{nmod}
+				\end{dependency}
+				\caption{Sempre tivemos canções \emph{mais} lentas}
+				\label{fig:advmod2}
+			\end{figure*}
+		
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						ADV\& ADV\& VERB\& DET\& NOUN\& ADP\& DET\& NOUN\\
+						Só\& assim\& evitarão\& a\& estratificação\& de\& a\& legislação\\
+						só\& assim\& evitar\& o\& estratificação\& de\& a\& legislação\\
+					\end{deptext}
+					
+					\depedge{2}{1}{advmod}
+					\depedge{3}{2}{advmod}
+					\deproot{3}{root}
+					\depedge{5}{4}{det}
+					\depedge{3}{5}{obj}
+					\depedge{8}{6}{case}
+					\depedge{8}{7}{det}
+					\depedge{5}{8}{nmod}
+					
+				\end{dependency}
+				\caption{\emph{Só} assim se evitará a estratificação da legislação}
+				\label{fig:advmod3}
+			\end{figure*}
+		
+		\subsection{Caso seja nome}
+			
+			 O núcleo nominal de um adjunto adverbial (substantivo, pronome, sintagma nominal) será anotado como \emph{obl}. Poderá modificar \emph{VERB}, \emph{ADJ} ou \emph{ADV}.
+
+			Como exemplo de modificador de \emph{VERB}, observam-se a \fullref{fig:obl1} e a \fullref{fig:obl4}. 
+
+			Como exemplo de modificador de \emph{ADJ}, observa-se a \fullref{fig:obl3}.
+
+			Como exemplo de modificador de \emph{ADV}, observa-se a \fullref{fig:obl2}.
+
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						DET\& NOUN\& ADP\& DET\& NOUN\& VERB\& ADP\& DET\& NOUN\\
+						A\& ideia\& para\& o\& livro\& surgiu\& após\& uma\& entrevista\\
+						o\& ideia\& para\& o\& livro\& surgir\& após\& um\& entrevista\\
+					\end{deptext}
+					
+					\depedge{2}{1}{det}
+					\depedge{6}{2}{nsubj}
+					\depedge{5}{3}{case}
+					\depedge{5}{4}{det}
+					\depedge{2}{5}{nmod}
+					\deproot{6}{root}
+					\depedge{9}{7}{case}
+					\depedge{9}{8}{det}
+					\depedge{6}{9}{obl}
+				\end{dependency}
+				\caption{A ideia para o livro surgiu após uma \emph{entrevista}}
+				\label{fig:obl1}
+			\end{figure*}
+			
+
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						ADV\& ADP\& DET\& NOUN\& ADJ\\
+						Independentemente\& de\& o\& poder\& civil\\
+						independentemente\& de\& o\& poder\& civil\\
+					\end{deptext}					
+
+					\deproot{1}{root}
+					\depedge{4}{2}{case}
+					\depedge{4}{3}{det}
+					\depedge{1}{4}{obl}
+					\depedge{4}{5}{amod}
+				\end{dependency}
+				\caption{Independentemente do \emph{poder} civil}
+				\label{fig:obl2}
+			\end{figure*}
+
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						VERB\& SCONJ\& VERB\& NOUN\& ADV\& ADJ\& ADP\& DET\& NOUN\\
+						Passaram\& a\& exigir\& funcionários\& mais\& abertos\& a\& o\& diálogo\\
+						passar\& a\& exigir\& funcionário\& mais\& aberto\& a\& o\& diálogo\\
+					\end{deptext}
+					
+					\deproot{1}{root}
+					\depedge{3}{2}{mark}
+					\depedge{1}{3}{xcomp}
+					\depedge{3}{4}{obj}
+					\depedge{6}{5}{advmod}
+					\depedge{4}{6}{amod}
+					\depedge{9}{7}{case}
+					\depedge{9}{8}{det}
+					\depedge{6}{9}{obl}
+				\end{dependency}
+				\caption{Passaram a exigir funcionários mais abertos ao \emph{diálogo}}
+				\label{fig:obl3}
+			\end{figure*}
+
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						NOUN\& VERB\& ADP\& NOUN\& ADP\& DET\& NOUN\\
+						Terrenos\& entregues\& como\& pagamento\& de\& uma\& dívida\\
+						terrreno\& entregar\& como\& pagamento\& de\& um\& dívida\\
+					\end{deptext}
+					
+					\deproot{1}{root}
+					\depedge{1}{2}{acl}
+					\depedge{4}{3}{case}
+					\depedge{2}{4}{obl}
+					\depedge{7}{5}{case}
+					\depedge{7}{6}{det}
+					\depedge{4}{7}{nmod}
+		
+				\end{dependency}
+				\caption{Terrenos entregues como \emph{pagamento} de uma dívida}
+				\label{fig:obl4}
+			\end{figure*}
+
+			A relação de \emph{obl}, como é vista na \fullref{fig:obl3}, pode ser considerada um argumento de adjetivo. (Ver Xx)
+			
+			A subrelação \emph{obl:agent} é utilizada para indicar o agente de um verbo na voz passiva. (ver \fullref{sec:vozpass}) 
+
+		\subsection{Caso seja verbo}
+			A oração subordinada adverbial será anotada como \emph{advcl}, não havendo diferenciação semântica (temporal, causal, concessiva, final, etc). Poderá modificar \emph{VERB}.
+
+			\fullref{fig:advcl1}
+
+			\fullref{fig:advcl2}
+			
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						SCONJ\& VERB\& DET\& NOUN\& PUNCT\& AUX\& DET\& ADJ\& NOUN\\
+						Como\& notou\& o\& jornalista\& ,\& é\& uma\& boa\& grana\\
+						como\& notar\& o\& jornalista\& ,\& ser\& um\& bom\& grana\\
+					\end{deptext}
+					
+					\depedge{2}{1}{mark}
+					\depedge{9}{2}{advcl}
+					\depedge{4}{3}{det}
+					\depedge{2}{4}{nsubj}
+					\depedge{2}{5}{punct}
+					\depedge{9}{6}{cop}
+					\depedge{9}{7}{det}
+					\depedge{9}{8}{amod}
+					\deproot{9}{root}
+				\end{dependency}
+				\caption{Como \emph{notou} o jornalista, é uma boa grana}
+				\label{fig:advcl1}
+			\end{figure*}
+
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						SCONJ\& PROPN\& VERB\& SCONJ\& VERB\& PUNCT\& VERB\& NOUN\\
+						Quando\& Sarney\& começou\& a\& escrever\& ,\& chegaram\& protestos\\
+						quando\& Sarney\& começar\& a\& escrever\& ,\& chegar\& protesto\\
+					\end{deptext}
+					
+					\depedge{3}{1}{mark}
+					\depedge{3}{2}{nsubj}
+					\depedge{7}{3}{advcl}
+					\depedge{5}{4}{mark}
+					\depedge{3}{5}{xcomp}
+					\depedge{3}{6}{punct}
+					\deproot{7}{root}
+					\depedge{7}{8}{nsubj}
+				
+				\end{dependency}
+				\caption{Quando Sarney \emph{começou} a escrever, chegaram protestos}
+				\label{fig:advcl2}
+			\end{figure*}
+
+		\subsection{\emph{Teve uma relação extraconjugal com Monica Lewinsky}}
+			Consideramos que \say{Monica} apontará para o verbo, e não para o nome. Sendo assim, o pai de \say{Monica} será \say{teve} e sua deprel será \emph{obl}, . 
+			
+			\fullref{fig:monica}
+			
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						VERB\& DET\& NOUN\& ADJ\& ADP\& PROPN\& PROPN\\
+						Teve\& uma\& relação\& extraconjugal\& com\& Monica\& Lewinsky\\
+						ter\& um\& relação\& extraconjugal\& com\& Monica\& Lewinsky\\
+					\end{deptext}
+					
+					\deproot{1}{root}
+					\depedge{3}{2}{det}
+					\depedge{1}{3}{obj}
+					\depedge{3}{4}{amod}
+					\depedge{6}{5}{case}
+					\depedge{1}{6}{obl}
+					\depedge{6}{7}{flat:name}
+				
+				\end{dependency}
+				\caption{Teve uma relação extraconjugal com \emph{Monica} Lewinsky}
+				\label{fig:monica}
+			\end{figure*}
+
+			
+			Nas estruturas comparativas, independente de o núcleo do fragmento ser um verbo ou um nome, ele será anotado com a deprel \emph{advcl}. (ver Xx)
+
+
+\section{Voz passiva}\label{sec:vozpass}
+
+	Na voz passiva, anota-se o sujeito com a deprel \emph{nsubj:pass}, e o agente da passiva, com a deprel \emph{obl:agent}. O verbo \say{ser}, como explicitado na \fullref{sec:servozpassiva}, recebe upos \emph{AUX} e deprel \emph{aux:pass}. 
+	
+	\fullref{fig:vozpass1}
+	
+	\fullref{fig:vozpass2}	
+
+	\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						DET\& PROPN\& AUX\& VERB\& ADP\& NUM\& NOUN\\
+						A\& URV\& é\& produzida\& por\& três\& índices\\
+						o\& URV\& ser\& produzir\& por\& três\& índice\\
+					\end{deptext}
+					
+					\depedge{2}{1}{det}
+					\depedge{4}{2}{nsubj:pass}
+					\depedge{4}{3}{aux:pass}
+					\deproot{4}{root}
+					\depedge{7}{5}{case}
+					\depedge{7}{6}{nummod}
+					\depedge{4}{7}{obl:agent}
+		
+				\end{dependency}
+				\caption{A URV é produzida por três índices}
+				\label{fig:vozpass1}
+			\end{figure*}
+
+			\begin{figure*}[htbp]
+				\centering
+				\vspace{.8cm}
+				\begin{dependency}
+					\begin{deptext}
+						DET\& NOUN\& VERB\& AUX\& VERB\& ADP\& DET\& NOUN\\
+						O\& trabalho\& pode\& ser\& feito\& por\& qualquer\& pessoa\\
+						o\& trabalho\& poder\& ser\& fazer\& por\& qualquer\& pessoa\\
+					\end{deptext}
+					
+					\depedge{2}{1}{det}
+					\depedge{3}{2}{nsubj:pass}
+					\deproot{3}{root}
+					\depedge{5}{4}{aux:pass}
+					\depedge{3}{5}{xcomp}
+					\depedge{8}{6}{case}
+					\depedge{8}{7}{det}
+					\depedge{3}{8}{obl:agent}
+				\end{dependency}
+				\caption{O trabalho pode ser feito por qualquer pessoa}
+				\label{fig:vozpass2}
+			\end{figure*}
+
+	\fullref{tab:vozpassiva}
+
+
+\section{Estruturas comparativas}
+
+	Estruturas comparativas são de anotação complexa, o que se verifica pela existência de um \href{https://universaldependencies.org/workgroups/comparatives.html}{working group (WG) em UD} dedicado especialmente a elas. A seguir, listamos as frases utilizadas no WG, traduzidas em português, e com a anotação adequada, além de algumas frases de anotação complexa no Bosque-UD.
+
+	\subsection{Frases do Working Group}
+	
+	\begin{figure}
+	    \centering
+	    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{imagesDrive/image23.png}
+	    \caption{Eu coloquei \emph{tanta farinha quanto} a receita pedia}
+	    \label{fig:comparative1}
+	    \end{figure}{}
+	
+	\begin{figure}
+	    \centering
+	    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{imagesDrive/image32.png}
+	    \caption{Martin é o cara \emph{mais inteligente de todos}}
+	    \label{fig:comparative2}
+	\end{figure}{}
+
+	
 \section{Elementos discursivos}
 
 
 	\subsection{É que}
 
 
-	A construção \say{é que} pode aparecer de duas maneiras no corpus: marcada ou não como MWE. Como MWE, \say{é que} é uma ocorrência típica do discurso oral, sem ligação clara com a estrutura da oração. Por outro lado, \say{é} e \say{que} são independentes entre si quando introduzem uma oração subordinada substantiva predicativa ou subjetiva. (ver Xx)
+	A construção \say{é que} pode aparecer de duas maneiras: marcada ou não como MWE. Como MWE, \say{é que} é uma ocorrência típica do discurso oral, sem ligação clara com a estrutura da oração. Por outro lado, \say{é} e \say{que} são independentes entre si quando introduzem uma oração subordinada substantiva predicativa ou subjetiva. (ver Xx)
 
-Quando \say{é que} tem esse efeito discursivo, anota-se da seguinte maneira: \newline
+	Quando \say{é que} tem esse efeito discursivo, anota-se da seguinte maneira:
 
 		É: tem upos \emph{AUX} e deprel \emph{discourse}, e aponta para a head da oração; 
 
-		Que: tem upos \emph{SCONJ} e deprel \emph{fixed}, e aponta para \say{é}. 
+		Que: tem upos \emph{SCONJ} e deprel \emph{fixed}, e aponta para \say{é}. \newline
 
 		\fullref{dep:equeMWE1}
 
 		\fullref{fig:equeMWE2}
 
-		\fullref{fig:equeMWE3}
+		\fullref{fig:equeMWE3} \newline
 
-OBS.: Consideramos \say{Não é que} como MWE.  
+	Igualmente, consideramos \say{Não é que} como MWE.  
 
-\say{\emph{Não é que} o sábio das matrizes encontrou, no PSD, entusiastas seguidores?} 
+	\say{\emph{Não é que} o sábio das matrizes encontrou, no PSD, entusiastas seguidores?} 
 
 
 \begin{figure*}[htbp]
@@ -623,7 +1253,7 @@ OBS.: Consideramos \say{Não é que} como MWE.
 				\end{deptext}
 				\depedge{2}{1}{advmod}
 				\depedge{5}{2}{advmod}
-				\deproot{5}{3}{discourse}
+				\depedge{5}{3}{discourse}
 				\depedge{3}{4}{fixed}
 				\deproot{5}{root}
 				\depedge{7}{6}{det}
