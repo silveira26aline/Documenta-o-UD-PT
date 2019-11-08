@@ -1290,7 +1290,67 @@ Há dois tipos de conjunções no Bosque-UD: conjunção coordenativa (CCONJ) e 
 
 As conjunções coordenativas que estão marcadas como tal no corpus são \emph{e, mas, ou nem, porém, entretanto, quer, portanto, contudo, todavia, tampouco}. Além disso, existem as conjunções que aparecem como expressões multi palavras(MWE), são elas: \emph{no entanto, ou seja,além disso, por outro lado, ainda assim, isto é, em vez de, desse modo, apesar disso, sendo assim}.
 
-Além disso, também são consideradas conjunções casos em que não há uma oração. Toda vez que houver a coordenação entre dois ou mais termos, sejam eles oracionais ou nominais, o conectivo entre eles será classificado como conjunção. Exemplo:
+Além disso, também são consideradas conjunções casos em que não há uma oração. Toda vez que houver a coordenação entre dois ou mais termos, sejam eles oracionais ou nominais, o conectivo entre eles será classificado como conjunção.
+
+\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					PRON \& PRON \& VERB \& NOUN \& PUNCT \& CCONJ \& ADV \& ADV \& VERB \& PRON \& PRON \& 						AUX \& VERB\\
+					Eles \& se \& dizem \& oposição \& , \& mas \& ainda \& não \& informaram \& o \& que \& vão \& 							combater \\
+				\end{deptext}
+				\deproot{3}{root}
+				\depedge{3}{4}{xcomp}
+				\depedge{9}{5}{punct}
+				\depedge{9}{6}{cc}
+				\depedge{8}{7}{advmod}
+				\depedge{9}{8}{advmodl}
+				\depedge{3}{9}{conj}
+				
+			\end{dependency}
+			\caption{Eles se dizem oposição, \emph{mas} ainda não informaram o que vão combater}
+			\label{dep:mas}
+		\end{figure*}
+
+\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					CCONJ \& VERB \& PUNCT \& VERB \& DET \& NOUN \& ADP \& DET \& NOUN \& ADJ \& ADP \& NUM \& 					NOUN \& CCONJ \& ADV \& VERB \& VERB \& DET \& NOUN \& VERB \\
+					Ou \& seja \& , \& alugam \& o \& imóvel \& por \& um \& prazo \& máximo \& de \\
+					de \& 90 \& dias \& e \& ainda \& podem \& receber \& o \& valor \& adiantado \\
+					\& \& \& \& MWE=ou\_seja \& \\
+					\& \& \& \& MWEPOS=CCONJ \& \\
+				\end{deptext}
+				\depedge{4}{1}{cc}
+				\depedge{1}{2}{fixed}
+				\depedge{1}{3}{punct}
+				\deproot{4}{root}
+				\depedge{6}{5}{det}
+				\depedge{4}{6}{obj}
+				\depedge{9}{7}{case}
+				\depedge{9}{8}{det}
+				\depedge{4}{9}{obl}
+				\depedge{9}{10}{amod}
+				\depedge{13}{11}{case}
+				\depedge{13}{12}{nummod}
+				\depedge{9}{13}{nmod}
+				\depedge{17}{14}{cc}
+				\depedge{17}{15}{advmod}
+				\depedge{4}{16}{conj}
+				\depedge{16}{17}{xcomp}
+				\depedge{19}{18}{det}
+				\depedge{17}{19}{obj}
+				\depedge{19}{20}{acl}
+
+				
+			\end{dependency}
+			\caption{ \emph{Ou seja} , alugam o imóvel por um prazo máximo de 90 dias e ainda podem receber o valor adiantado}
+			\label{dep:ousejaMWE2}
+		\end{figure*}
+
 
 
 
@@ -1300,13 +1360,81 @@ As conjunções subordinativas que estão marcadas como tal no corpus são \emph
 
 É importante lembrar que palavras tidas usualmente como preosição, ao introduzir orações, são classificadas como conjunções subordinativas e recebem a deprel mark. (Ver seção Preposições)
 
+\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					SCONJ \& PRON \& VERB \& DET \& NOUN \& PUNCT \& VERB \& NOUN \& ADJ \& CCONJ \& VERB \& 						DET \& NOUN \& ADJ \\
+					Se \& eu \& dirigisse \& uma \& federação \& , \& apresentaria \& balanços \& mensais \& e \& liberaria 					\& minhas \& contas \& bancárias \\
+				\end{deptext}
+				\depedge{3}{1}{mark}
+				\depedge{7}{3}{advcl}
+				\deproot{7}{root}
+				\depedge{11}{10}{cc}
+				\depedge{7}{11}{conj}
+				
+			\end{dependency}
+			\caption{\emph{Se} eu dirigisse uma federação, apresentaria balanços mensais e liberaria minhas contas bancárias}
+		\end{figure*}
+
+\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					ADV \& ADV \& AUX \& SCONJ \& VERB \& DET \& NOUN \& SCONJ \& VERB \& DET \& NOUN \\
+					Uma \& vez \& que \& esta \& central \& esteja \& em \& funcionamento \& , \& passará \& a \& 							receber \& também \& as \& carreiras \& que \& em \& janeiro \& sairão \& do \& Campo \& Pequeno \& 						para \& Sete \& Rios \\
+					\& \& \& \& MWE=uma\_vez\_que \& \\
+					\& \& \& \& MWEPOS=SCONJ \& \\
+				\end{deptext}
+				\depedge{8}{1}{mark}
+				\depedge{1}{2}{fixed}
+				\depedge{1}{3}{fixed}
+				\deproot{8}{root}				
+			\end{dependency}
+			\caption{\emph{Uma vez que} esta central esteja em funcionamento, passará a receber também as carreiras que eu janeiro sairão do Campo Pequeno para Sete Rios}
+		\end{figure*}
+
+
 \subsection{Advérbios interrogativos}
 
-Advérbios são palavras que costumam modificar verbos, adjetivos e outros advérbios. Além disso, em português, algumas dessas palvras podem operar como conjunções subordinativas quando aparecem na introdução de orações subordinadas adverbiais. Exemplo:
+Advérbios são palavras que costumam modificar verbos, adjetivos e outros advérbios. Além disso, em português, algumas dessas palvras podem operar como conjunções subordinativas quando aparecem na introdução de orações subordinadas adverbiais.
+
+\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					ADP \& NOUN \& PUNCT \& SCONJ \& VERB \& DET \& NOUN \& PUNCT \& AUX \& SCONJ \& VERB \& 						VERB \& PUNCT \& SCONJ \& ADV \& AUX \& VERB \\
+					Na \& Vila \& , \& quando \& recebo \& a \& bola \& , \& tenho \& que \& 											ficar \& olhando \& sua \& trajetória \& , \& para \& não \& ser \& surpreendido \\
+				\end{deptext}
+				\depedge{5}{6}{mark}
+				\deproot{14}{7}{advcl}	
+			\end{dependency}
+			\caption{Na Vila, \emph{quando}recebo a bola, tenho que ficar olhando sua trajetória, para não ser surpreendido}
+		\end{figure*}
 
 \section{Preposições}
 
 As preposições são palavras que operam como conectores, geralemente, de termos nominais. Entretanto, no Bosque-UD, palavras tidas usualmente como preposições podem operar como conjunções subordinativas quando em contexto de introdução de oração. Exemplo:
+
+\begin{figure*}[htbp]
+			\centering
+			\vspace{.8cm}
+			\begin{dependency}
+				\begin{deptext}
+					CCONJ \& PROPN \& CCONJ \& DET \& NOUN \& ADV \& VERB \& DET \& NOUN \& SCONJ \& PRON \& 						VERB \\
+					Nem \& Lula \& nem \& o \& partido \& ainda \& encontram \& um \& discurso \& para \& se \& 							diferenciar \\
+				\end{deptext}
+				\deproot{7}{root}
+				\depedge{7}{9}{obj}
+				\depedge{12}{10}{mark}
+				\depedge{9}{12}{acl}
+				
+			\end{dependency}
+			\caption{Nem Lula nem o partido ainda encontraram um discurso \emph{para} se diferenciar}
+		\end{figure*}
 
 
 \section{Estruturas comparativas}
